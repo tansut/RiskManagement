@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="analyticsservice_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Kalitte.BI.ServerPlatform.Entities" />
+      <xsd:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Kalitte.BI.Shared" />
+      <xsd:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAnalyticsService_GetModules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModules" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetModules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetModuleDataAsArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleDataAsArray" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetModuleDataAsArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleDataAsArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetModuleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleData" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetModuleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_ValidateUsernamePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUsernamePassword" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_ValidateUsernamePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUsernamePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetUserDashboards_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDashboards" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetUserDashboards_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDashboardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetFilterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilterData" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetFilterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_SaveUserReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserReport" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_SaveUserReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetUserReports_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserReports" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetUserReports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetReportDataByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportDataByID" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_GetReportDataByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportDataByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_DeleteReportDataByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReportDataByID" />
+  </wsdl:message>
+  <wsdl:message name="IAnalyticsService_DeleteReportDataByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReportDataByIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAnalyticsService">
+    <wsdl:operation name="GetModules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/GetModules" message="tns:IAnalyticsService_GetModules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/GetModulesResponse" message="tns:IAnalyticsService_GetModules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleDataAsArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/GetModuleDataAsArray" message="tns:IAnalyticsService_GetModuleDataAsArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/GetModuleDataAsArrayResponse" message="tns:IAnalyticsService_GetModuleDataAsArray_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/GetModuleData" message="tns:IAnalyticsService_GetModuleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/GetModuleDataResponse" message="tns:IAnalyticsService_GetModuleData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUsernamePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/ValidateUsernamePassword" message="tns:IAnalyticsService_ValidateUsernamePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/ValidateUsernamePasswordResponse" message="tns:IAnalyticsService_ValidateUsernamePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDashboards">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/GetUserDashboards" message="tns:IAnalyticsService_GetUserDashboards_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/GetUserDashboardsResponse" message="tns:IAnalyticsService_GetUserDashboards_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/GetFilterData" message="tns:IAnalyticsService_GetFilterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/GetFilterDataResponse" message="tns:IAnalyticsService_GetFilterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/SaveUserReport" message="tns:IAnalyticsService_SaveUserReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/SaveUserReportResponse" message="tns:IAnalyticsService_SaveUserReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserReports">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/GetUserReports" message="tns:IAnalyticsService_GetUserReports_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/GetUserReportsResponse" message="tns:IAnalyticsService_GetUserReports_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDataByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/GetReportDataByID" message="tns:IAnalyticsService_GetReportDataByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/GetReportDataByIDResponse" message="tns:IAnalyticsService_GetReportDataByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReportDataByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalyticsService/DeleteReportDataByID" message="tns:IAnalyticsService_DeleteReportDataByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyticsService/DeleteReportDataByIDResponse" message="tns:IAnalyticsService_DeleteReportDataByID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="analyticsservice" type="tns:IAnalyticsService">
+    <wsp:PolicyReference URI="#analyticsservice_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetModules">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/GetModules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleDataAsArray">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/GetModuleDataAsArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleData">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/GetModuleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUsernamePassword">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/ValidateUsernamePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDashboards">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/GetUserDashboards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilterData">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/GetFilterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserReport">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/SaveUserReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserReports">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/GetUserReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportDataByID">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/GetReportDataByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReportDataByID">
+      <soap:operation soapAction="http://tempuri.org/IAnalyticsService/DeleteReportDataByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

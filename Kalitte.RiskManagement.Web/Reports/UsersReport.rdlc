@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>3.30728cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.28084cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.38666cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5.08cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>10.16003cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!UserName.Value</SortExpression>
+                      </UserSort>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Kullanıcı Adı</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>DarkGreen</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Ad.Value</SortExpression>
+                      </UserSort>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Ad</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>DarkGreen</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Soyad.Value</SortExpression>
+                      </UserSort>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Soyad</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>DarkGreen</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox15">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!UnvanAd.Value</SortExpression>
+                      </UserSort>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Unvan</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>DarkGreen</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!BirimAd.Value</SortExpression>
+                      </UserSort>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Birim</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>DarkGreen</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="UserName">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!UserName.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>UserName</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Ad">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Ad.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Ad</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Soyad">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Soyad.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Soyad</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="UnvanAd1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!UnvanAd.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>UnvanAd1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="UnitFullName">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!UnitFullName.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>UnitFullName</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <RepeatRowHeaders>true</RepeatRowHeaders>
+        <DataSetName>Users</DataSetName>
+        <Height>1.2cm</Height>
+        <Width>25.21481cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>2.78809in</Height>
+    <Style />
+  </Body>
+  <Width>9.92709in</Width>
+  <Page>
+    <PageHeader>
+      <Height>3.81987cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>cevrevesehircilik_logo</Value>
+          <Sizing>FitProportional</Sizing>
+          <Height>2.39958cm</Height>
+          <Width>5.55624cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Kullanıcı Listesi Raporu</Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>DarkGreen</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Toplam Kullanıcı Sayısı: </Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Count(Fields!ID.Value, "Users")</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>2.43486cm</Top>
+          <Height>1.24389cm</Height>
+          <Width>6.58812cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!ExecutionTime</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>0.81174cm</Top>
+          <Left>21.52862cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=(Globals!PageNumber &amp; " / " &amp; Globals!TotalPages)</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>1.04909cm</Top>
+          <Left>11.20986cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>50cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="KalitteRiskManagementFrameworkBusinessManagement">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>068af155-7de8-491e-b6af-2cc1fc6d64cf</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Users">
+      <Query>
+        <DataSourceName>KalitteRiskManagementFrameworkBusinessManagement</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ApplicationId">
+          <DataField>ApplicationId</DataField>
+          <rd:TypeName>System.Guid</rd:TypeName>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+          <rd:TypeName>System.Guid</rd:TypeName>
+        </Field>
+        <Field Name="UserName">
+          <DataField>UserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LoweredUserName">
+          <DataField>LoweredUserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MobileAlias">
+          <DataField>MobileAlias</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsAnonymous">
+          <DataField>IsAnonymous</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LastActivityDate">
+          <DataField>LastActivityDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BirimID">
+          <DataField>BirimID</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="UnvanID">
+          <DataField>UnvanID</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Ad">
+          <DataField>Ad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Soyad">
+          <DataField>Soyad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Birim">
+          <DataField>Birim</DataField>
+          <rd:TypeName>Kalitte.RiskManagement.Framework.Model.Birim</rd:TypeName>
+        </Field>
+        <Field Name="BirimReference">
+          <DataField>BirimReference</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityReference`1[[Kalitte.RiskManagement.Framework.Model.Birim, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Unvan">
+          <DataField>Unvan</DataField>
+          <rd:TypeName>Kalitte.RiskManagement.Framework.Model.Unvan</rd:TypeName>
+        </Field>
+        <Field Name="UnvanReference">
+          <DataField>UnvanReference</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityReference`1[[Kalitte.RiskManagement.Framework.Model.Unvan, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="CalismaGrupKullanici">
+          <DataField>CalismaGrupKullanici</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.CalismaGrupKullanici, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="CalismaGrupTanim">
+          <DataField>CalismaGrupTanim</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.CalismaGrupTanim, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="CalismaGrupTanim1">
+          <DataField>CalismaGrupTanim1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.CalismaGrupTanim, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Kontrol">
+          <DataField>Kontrol</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Kontrol, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Kontrol1">
+          <DataField>Kontrol1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Kontrol, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="RiskSoruCevap">
+          <DataField>RiskSoruCevap</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.RiskSoruCevap, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="RiskSoruCevap1">
+          <DataField>RiskSoruCevap1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.RiskSoruCevap, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Soru">
+          <DataField>Soru</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Soru, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Soru1">
+          <DataField>Soru1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Soru, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="SoruGrupTanim">
+          <DataField>SoruGrupTanim</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.SoruGrupTanim, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="SoruGrupTanim1">
+          <DataField>SoruGrupTanim1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.SoruGrupTanim, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Surec">
+          <DataField>Surec</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Surec, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Surec1">
+          <DataField>Surec1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Surec, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="SurecCalisan">
+          <DataField>SurecCalisan</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.SurecCalisan, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="DosyaEk">
+          <DataField>DosyaEk</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.DosyaEk, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="DosyaEk1">
+          <DataField>DosyaEk1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.DosyaEk, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Risk">
+          <DataField>Risk</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Risk, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="Risk1">
+          <DataField>Risk1</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.Risk, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="RiskGecmis">
+          <DataField>RiskGecmis</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityCollection`1[[Kalitte.RiskManagement.Framework.Model.RiskGecmis, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="aspnet_Users1">
+          <DataField>aspnet_Users1</DataField>
+          <rd:TypeName>Kalitte.RiskManagement.Framework.Model.aspnet_Users</rd:TypeName>
+        </Field>
+        <Field Name="aspnet_Users1Reference">
+          <DataField>aspnet_Users1Reference</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityReference`1[[Kalitte.RiskManagement.Framework.Model.aspnet_Users, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="aspnet_Users2">
+          <DataField>aspnet_Users2</DataField>
+          <rd:TypeName>Kalitte.RiskManagement.Framework.Model.aspnet_Users</rd:TypeName>
+        </Field>
+        <Field Name="aspnet_Users2Reference">
+          <DataField>aspnet_Users2Reference</DataField>
+          <rd:TypeName>System.Data.Objects.DataClasses.EntityReference`1[[Kalitte.RiskManagement.Framework.Model.aspnet_Users, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]</rd:TypeName>
+        </Field>
+        <Field Name="UnvanAd">
+          <DataField>UnvanAd</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TCKimlikNo">
+          <DataField>TCKimlikNo</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="BirimAd">
+          <DataField>BirimAd</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitFullName">
+          <DataField>UnitFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CityName">
+          <DataField>CityName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AdSoyad">
+          <DataField>AdSoyad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EntityState">
+          <DataField>EntityState</DataField>
+          <rd:TypeName>System.Data.EntityState</rd:TypeName>
+        </Field>
+        <Field Name="EntityKey">
+          <DataField>EntityKey</DataField>
+          <rd:TypeName>System.Data.EntityKey</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Kalitte.RiskManagement.Framework.Business.Management</rd:DataSetName>
+        <rd:TableName>UserBusiness</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>RetreiveEntityItems</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethodSignature>System.Collections.Generic.List`1[Kalitte.RiskManagement.Framework.Model.aspnet_Users] RetreiveEntityItems(Kalitte.RiskManagement.Framework.Core.ListingParameters)</rd:ObjectDataSourceSelectMethodSignature>
+        <rd:ObjectDataSourceType>Kalitte.RiskManagement.Framework.Business.Management.UserBusiness, Kalitte.RiskManagement.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="cevrevesehircilik_logo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>b254e694-6773-45f1-bede-434fb3b36302</rd:ReportID>
+</Report>

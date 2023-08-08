@@ -1,0 +1,276 @@
+﻿html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input
+{
+    margin-top: 0pt;
+    margin-right: 0pt;
+    margin-bottom: 0pt;
+    margin-left: 0pt;
+    padding-top: 0pt;
+    padding-right: 0pt;
+    padding-bottom: 0pt;
+    padding-left: 0pt;
+}
+
+
+body, p, li, h1, h2, h3, table
+{
+    font-family: "Lucida Grande", "Lucida Sans Unicode",Arial,Verdana,sans-serif;
+    font-size: 11px;
+    color: #333333;
+    line-height: 20px;
+}
+
+h1, h2, h3
+{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    color: #252525;
+    line-height: 20px;
+}
+
+h1
+{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #264474;
+}
+
+h2
+{
+    font-size: 13px;
+}
+
+h3
+{
+    font-size: 11px;
+    margin-bottom: 1px;
+}
+
+.x-portlet .x-panel-mc
+{
+    padding-top: 0px !important;
+}
+
+.bullet
+{
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.icon-info
+{
+    background-image: url(../Image/Info_Box_Blue.png);
+    background-repeat: no-repeat;
+    min-height: 16px;
+    padding-left: 18px;
+}
+
+a, a:visited
+{
+    text-decoration: none;
+    color: #254994;
+}
+
+    a:hover
+    {
+        color: #0099CC;
+    }
+
+.riskMatrixCell
+{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    white-space: normal !important;
+    display: block;
+}
+
+    .riskMatrixCell span
+    {
+        font-size: 10px;
+        font-family: verdana;
+    }
+
+.riskMatrixRow
+{
+    padding: 0px;
+    margin: 0px;
+    border: 0px none;
+    background-color: #FFFFFF;
+}
+
+div.container h1 span
+{
+    display: block;
+}
+
+div.container h1 ul
+{
+    float: right;
+}
+
+    div.container h1 ul li
+    {
+        float: left;
+        line-height: 1em;
+    }
+
+        div.container h1 ul li a, div.container h1 ul li a:visited
+        {
+            margin-right: 5px;
+            color: #FFFFFF;
+            font-size: 10px;
+        }
+
+div.container select
+{
+    font-size: 11px;
+}
+
+div.container h1 ul li a:hover
+{
+    color: #FF3300;
+}
+
+.container
+{
+    margin-bottom: 0px;
+}
+
+    .container h1
+    {
+        font-size: 11px;
+        padding-top: 2px;
+        padding-left: 8px;
+        font-weight: bold;
+        display: block;
+        color: #ffffff;
+        margin-bottom: 0px;
+        padding-right: 2px;
+        padding-bottom: 1px;
+        background-color: #666666;
+        background-image: url('Images/container-header.gif');
+        background-repeat: repeat-x;
+    }
+
+
+    .container div.body
+    {
+        border-style: none solid solid solid;
+        border-width: 1px;
+        border-color: #D1D1D1;
+        padding: 2px;
+        background-color: #F4F4F4;
+        clear: both;
+        color: #333333;
+    }
+
+        .container div.body.nopad
+        {
+            padding: 0px;
+        }
+
+        .container div.body.noborder
+        {
+            border-style: none;
+        }
+
+.riskMatrixCell span
+{
+    white-space: normal !important;
+}
+
+.treeBody
+{
+    background-color: #EBEBEB;
+}
+
+    .treeBody span
+    {
+    }
+
+.dataTable
+{
+    border-collapse: collapse;
+    font-size: 98%;
+    margin-bottom: 7px;
+    table-layout: fixed;
+    width: 100%;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+    .dataTable tr:first-child th
+    {
+        border-bottom: 1px solid hsl(0, 0%, 50%);
+        color: hsl(0, 0%, 0%);
+        font-weight: bold;
+        padding-bottom: 3px;
+        padding-top: 12px;
+    }
+
+    .dataTable th
+    {
+        font-weight: normal;
+        text-align: center;
+    }
+
+        .dataTable th.gI
+        {
+            text-align: left;
+        }
+
+    .dataTable tr.xnb
+    {
+        background-color: #F8F8F8;
+    }
+
+    .dataTable .lb
+    {
+        text-align: left;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+
+    .dataTable tr td
+    {
+        padding: 4px 4px 3px;
+    }
+
+    .dataTable td.PF
+    {
+        text-align: left;
+    }
+
+    .dataTable td
+    {
+        border-bottom: 1px solid #CBCBCB;
+        padding: 0.35em;
+        text-align: center;
+    }
+
+
+
+#pageContentHolder_surface_Controller
+{
+    display: none !important;
+}
+
+.surecbutton
+{
+    cursor: pointer;
+    border:none;
+    background:none;
+    color: #0084AD;
+}
+
+
+ .search-item {
+            font          : normal 11px tahoma, arial, helvetica, sans-serif;
+            padding       : 3px 10px 3px 10px;
+            border        : 1px solid #fff;
+            border-bottom : 1px solid #eeeeee;
+            white-space   : normal;
+            color         : #555;
+        }

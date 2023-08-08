@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06B656D0-E7C8-4DB3-9407-41630DB3D67F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kalitte.RiskManagement.Framework</RootNamespace>
+    <AssemblyName>Kalitte.RiskManagement.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>RiskManagementSign.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DALEntities">
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\DALEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net, Version=1.0.4093.32349, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=1.0.0.32336, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Kalitte.Dashboard.Framework">
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Kalitte.Dashboard.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MapEntities">
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\MapEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Reporting\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Reporting\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b9a188c8922137c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerPlatform">
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\ServerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Solution Files\SharedAssemblyInfo.cs">
+      <Link>SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Business\BusinessBase.cs" />
+    <Compile Include="Business\Common\AutoCompleteBusiness.cs" />
+    <Compile Include="Business\Common\BirimAylikRiskSkorBusiness.cs" />
+    <Compile Include="Business\Common\CalismaGrupBusiness.cs" />
+    <Compile Include="Business\Common\CalismaGrupKullaniciBusiness.cs" />
+    <Compile Include="Business\Common\PermissionBindingBusiness.cs" />
+    <Compile Include="Business\Common\PermissionBusiness.cs" />
+    <Compile Include="Business\Common\ReportBusiness.cs" />
+    <Compile Include="Business\Common\ReportRoleBusiness.cs" />
+    <Compile Include="Business\Common\RiskMatrisBusiness.cs" />
+    <Compile Include="Business\Common\RiskScoreBusiness.cs" />
+    <Compile Include="Business\EntityBusiness.cs" />
+    <Compile Include="Business\Management\CityBusiness.cs" />
+    <Compile Include="Business\Management\DuyuruBusiness.cs" />
+    <Compile Include="Business\Management\HedefBusiness.cs" />
+    <Compile Include="Business\Management\OtoTamamlaBusiness.cs" />
+    <Compile Include="Business\Management\PerformansBusiness.cs" />
+    <Compile Include="Business\Management\QuestionGroupDefinitionBusiness.cs" />
+    <Compile Include="Business\Management\RiskGroupDefinitionBusiness.cs" />
+    <Compile Include="Business\Management\RiskGroupQuestionGroupBusiness.cs" />
+    <Compile Include="Business\Management\RoleBusiness.cs" />
+    <Compile Include="Business\Management\StratejikAmacBusiness.cs" />
+    <Compile Include="Business\Management\SurecYararlananTanimBusiness.cs" />
+    <Compile Include="Business\Reporting\BirimAylikRiskSkorReportBusiness.cs" />
+    <Compile Include="Business\Reporting\ControlReportBusiness.cs" />
+    <Compile Include="Business\Reporting\KontrolReportBusiness.cs" />
+    <Compile Include="Business\Reporting\QuestionAnswerReportBusiness.cs" />
+    <Compile Include="Business\Reporting\RiskGroupReportBusiness.cs" />
+    <Compile Include="Business\Reporting\RiskHistoryReportBusiness.cs" />
+    <Compile Include="Business\Reporting\RiskReportBusiness.cs" />
+    <Compile Include="Business\Reporting\ReportingBusiness.cs" />
+    <Compile Include="Business\Reporting\RiskSkorReportBusiness.cs" />
+    <Compile Include="Business\Reporting\SurecReportBusiness.cs" />
+    <Compile Include="Business\Reporting\UnitReportingBusiness.cs" />
+    <Compile Include="Business\Surec\AnswerBusiness.cs" />
+    <Compile Include="Business\Surec\DosyaEkBusiness.cs" />
+    <Compile Include="Business\Surec\RiskGecmisBusiness.cs" />
+    <Compile Include="Business\Surec\QuestionBusiness.cs" />
+    <Compile Include="Business\Surec\RiskBusiness.cs" />
+    <Compile Include="Business\Surec\RiskControlBusiness.cs" />
+    <Compile Include="Business\Surec\RiskQuestionAnswerBusiness.cs" />
+    <Compile Include="Business\Surec\SurecCalisanBusiness.cs" />
+    <Compile Include="Business\Surec\SurecHedefBusiness.cs" />
+    <Compile Include="Business\Surec\SurecIliskiBusiness.cs" />
+    <Compile Include="Business\Surec\SurecYararlananBusiness.cs" />
+    <Compile Include="Captcha\CaptchaHelper.cs" />
+    <Compile Include="Captcha\CaptchaImage.cs" />
+    <Compile Include="Controls\TTCityNameColumn.cs" />
+    <Compile Include="Controls\TTColorPalette.cs" />
+    <Compile Include="Controls\TTExportDataButton.cs" />
+    <Compile Include="Controls\TTExportMenu.cs" />
+    <Compile Include="Controls\TTExportWordButton.cs" />
+    <Compile Include="Controls\TTExportWordWindow.cs" />
+    <Compile Include="Controls\TTIDColumn.cs" />
+    <Compile Include="Controls\TTMenuCommand.cs" />
+    <Compile Include="Controls\TTMultiCombo.cs" />
+    <Compile Include="Controls\TTPuanCombo.cs" />
+    <Compile Include="Controls\TTReportViewer.cs" />
+    <Compile Include="Controls\TTRiskScoreGrid.cs" />
+    <Compile Include="Controls\TTRiskScoreTable.cs" />
+    <Compile Include="Controls\TTUnitNameColumn.cs" />
+    <Compile Include="Controls\TTUnitWindow.cs" />
+    <Compile Include="Core\DynamicEntity.cs" />
+    <Compile Include="Core\DynamicEntityList.cs" />
+    <Compile Include="Core\DynamicEntityPropertyDescriptor.cs" />
+    <Compile Include="Core\ISupportsPermission.cs" />
+    <Compile Include="Core\ReportData.cs" />
+    <Compile Include="Core\ReportStateManager.cs" />
+    <Compile Include="Core\RiskWidgetCommandInfo.cs" />
+    <Compile Include="Core\UnitFilterManager.cs" />
+    <Compile Include="Model\Common\Mantiksal.cs" />
+    <Compile Include="Model\Common\Reporting.cs" />
+    <Compile Include="Model\Common\RiskDurum.cs" />
+    <Compile Include="Model\Common\RiskKullaniciDurum.cs" />
+    <Compile Include="Model\Common\SoruGrupTur.cs" />
+    <Compile Include="Model\DosyaEk.cs" />
+    <Compile Include="Model\Reporting\RiskHistoryEntity.cs" />
+    <Compile Include="Model\Reporting\RiskPuanEntity.cs" />
+    <Compile Include="Model\Reporting\RiskSkorEntity.cs" />
+    <Compile Include="Model\Reporting\SoruCevapEntity.cs" />
+    <Compile Include="Model\Reporting\StatEntity.cs" />
+    <Compile Include="Model\Risk.cs" />
+    <Compile Include="Model\RiskFilter.cs" />
+    <Compile Include="Model\RiskGecmis.cs" />
+    <Compile Include="Model\Soru.cs" />
+    <Compile Include="Model\SoruGrupTanim.cs" />
+    <Compile Include="Model\Surec.cs" />
+    <Compile Include="Model\YetkiRol.cs" />
+    <Compile Include="Providers\DashboardMapDataProvider.cs" />
+    <Compile Include="Providers\TurkeyMapDataProvider.cs" />
+    <Compile Include="Providers\TurkeyMapXMLProvider.cs" />
+    <Compile Include="Security\RoleConstants.cs" />
+    <Compile Include="Business\Management\SurecDayanakTanimBusiness.cs" />
+    <Compile Include="Business\Management\UnitBusiness.cs" />
+    <Compile Include="Business\Management\UnvanBusiness.cs" />
+    <Compile Include="Business\Management\UserBusiness.cs" />
+    <Compile Include="Business\Surec\SurecDayanakBusiness.cs" />
+    <Compile Include="Business\Surec\WorkflowBusiness.cs" />
+    <Compile Include="Controls\TTAutoComplete.cs" />
+    <Compile Include="Controls\TTDateTimeColumn.cs" />
+    <Compile Include="Controls\TTComboBox.cs" />
+    <Compile Include="Controls\TTCompositeField.cs" />
+    <Compile Include="Controls\TTContainer.cs" />
+    <Compile Include="Controls\TTDateColumn.cs" />
+    <Compile Include="Controls\TTDateField.cs" />
+    <Compile Include="Controls\TTEmailField.cs" />
+    <Compile Include="Controls\TTEnumCombo.cs" />
+    <Compile Include="Controls\TTEnumStore.cs" />
+    <Compile Include="Controls\TTFieldSet.cs" />
+    <Compile Include="Controls\TTFileUploadField.cs" />
+    <Compile Include="Controls\TTFitLayout.cs" />
+    <Compile Include="Controls\TTGridFilters.cs" />
+    <Compile Include="Controls\TTIbanField.cs" />
+    <Compile Include="Controls\TTNumberField.cs" />
+    <Compile Include="Controls\TTPanel.cs" />
+    <Compile Include="Controls\TTPhoneBox.cs" />
+    <Compile Include="Controls\TTRowLayout.cs" />
+    <Compile Include="Controls\TTSplitButton.cs" />
+    <Compile Include="Controls\TTTabPanel.cs" />
+    <Compile Include="Controls\TTTextArea.cs" />
+    <Compile Include="Controls\TTToolbar.cs" />
+    <Compile Include="Controls\TTTreePanel.cs" />
+    <Compile Include="Controls\TTUserColumn.cs" />
+    <Compile Include="Controls\TTUsernameField.cs" />
+    <Compile Include="Core\CommandInfo.cs" />
+    <Compile Include="Controls\TTButton.cs" />
+    <Compile Include="Controls\TTButtonGroup.cs" />
+    <Compile Include="Controls\TTCheckBox.cs" />
+    <Compile Include="Controls\TTCmdButon.cs" />
+    <Compile Include="Controls\TTColumn.cs" />
+    <Compile Include="Controls\TTCommandColumn.cs" />
+    <Compile Include="Controls\TTFormPanel.cs" />
+    <Compile Include="Controls\TTGrid.cs" />
+    <Compile Include="Controls\TTGridCommand.cs" />
+    <Compile Include="Controls\TTMenu.cs" />
+    <Compile Include="Controls\TTMenuItem.cs" />
+    <Compile Include="Controls\TTPagingToolbar.cs" />
+    <Compile Include="Controls\TTStore.cs" />
+    <Compile Include="Controls\TTTextField.cs" />
+    <Compile Include="Controls\TTWindow.cs" />
+    <Compile Include="Core\Filter.cs" />
+    <Compile Include="Core\FilterDataType.cs" />
+    <Compile Include="Core\FilteringInfo.cs" />
+    <Compile Include="Core\FilterList.cs" />
+    <Compile Include="Core\ICommandHandler.cs" />
+    <Compile Include="Core\ICommandSource.cs" />
+    <Compile Include="Core\ListingParameters.cs" />
+    <Compile Include="Core\RelationAttribute.cs" />
+    <Compile Include="Extensions\Kalitte.cs" />
+    <Compile Include="Model\aspnet_Users.cs" />
+    <Compile Include="Model\Birim.cs" />
+    <Compile Include="Model\CalismaGrupKullanici.cs" />
+    <Compile Include="Model\Common\CalismaGrupTur.cs" />
+    <Compile Include="Model\Common\SurecDurum.cs" />
+    <Compile Include="Model\RiskModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RiskModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AppModule.cs" />
+    <Compile Include="Providers\SensorSiteMapProvider.cs" />
+    <Compile Include="Security\AuthenticationManager.cs" />
+    <Compile Include="Security\BusinessException.cs" />
+    <Compile Include="Security\ExceptionManager.cs" />
+    <Compile Include="Security\KnownCommand.cs" />
+    <Compile Include="Security\TechnicalException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BaseDashboardPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BaseEditor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ControlCommandHandler.cs" />
+    <Compile Include="UI\ISupportsMultiplePostbackTypes.cs" />
+    <Compile Include="UI\IUnitSelector.cs" />
+    <Compile Include="UI\IWindowControl.cs" />
+    <Compile Include="UI\PostbackType.cs" />
+    <Compile Include="UI\ViewPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BaseViewUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\CommandHandlerAttribute.cs" />
+    <Compile Include="UI\EditorViewControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ListerViewControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ViewControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\ConvertHelper.cs" />
+    <Compile Include="Utility\EntityListExporter.cs" />
+    <Compile Include="Utility\EntityMetadata.cs" />
+    <Compile Include="Utility\GridState.cs" />
+    <Compile Include="Utility\SerializationHelper.cs" />
+    <Compile Include="Utility\Sort.cs" />
+    <Compile Include="Utility\WebHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model\RiskModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RiskModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Kalitte.RiskManagement.Framework.Model.aspnet_Users.datasource" />
+    <None Include="Properties\DataSources\Kalitte.RiskManagement.Framework.Model.RiskManagementDb.datasource" />
+    <None Include="RiskManagementSign.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\iller.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

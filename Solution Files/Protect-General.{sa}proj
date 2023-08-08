@@ -1,0 +1,35 @@
+<SmartAssemblyProject ProjectID="{4fc355e5-56f5-45fa-80f5-e553218f425b}" Version="2.0">
+    <MainAssemblyFileName>..\..\Build.System\Deploy\Web\bin\Kalitte.RiskManagement.Framework.dll</MainAssemblyFileName>
+    <Configuration Name="Release">
+        <ApplicationName />
+        <Destination DestinationFileName="..\..\Build.System\Temp\Kalitte.RiskManagement.Framework.dll" />
+        <Assemblies>
+            <Assembly AssemblyName="Kalitte.RiskManagement.Framework, Culture=neutral, PublicKeyToken=null">
+                <Merging>
+                    <ResourcesCompression />
+                    <MemberRefsProxy />
+                    <Pruning />
+                    <Obfuscation />
+                    <ControlFlow />
+                </Merging>
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="Ext.Net, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="Newtonsoft.Json, Culture=neutral, PublicKeyToken=b9a188c8922137c6">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Core, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        </Assemblies>
+        <Options>
+            <Obfuscation FieldsNameMangling="2" NameMangling="2" />
+            <ExceptionReporting />
+            <StrongNameSigning />
+            <StringsEncoding />
+            <OtherProtections />
+            <OtherOptimizations />
+            <Debugging />
+        </Options>
+    </Configuration>
+</SmartAssemblyProject>

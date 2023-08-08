@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{20F99F77-E20A-4E86-A2B9-46545179CE6D}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Files\SharedAssemblyInfo.cs = Solution Files\SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitte.RiskManagement.Framework", "Kalitte.RiskManagement.Framework\Kalitte.RiskManagement.Framework.csproj", "{06B656D0-E7C8-4DB3-9407-41630DB3D67F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitte.RiskManagement.Web", "Kalitte.RiskManagement.Web\Kalitte.RiskManagement.Web.csproj", "{A4FF33DC-0CB0-4BA2-9E74-A3789EDA886A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitte.BI.Shared", "Kalitte.BI.Shared\Kalitte.BI.Shared.csproj", "{6D83FD81-CB27-4C99-9A0C-4E5D6CAC3B79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitte.BI.Analytics", "Kalitte.BI.Analytics\Kalitte.BI.Analytics.csproj", "{DFFA2AE9-3187-4D6F-A282-E9F43B1DCC12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitte.BI.ServerPlatform", "Kalitte.BI.ServerPlatform\Kalitte.BI.ServerPlatform.csproj", "{5899CFEA-2264-4BBD-8490-992B81E203AD}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://master:1010/tfs/kalitte.projects
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Kalitte.BI.Analytics\\Kalitte.BI.Analytics.csproj
+		SccProjectName1 = Kalitte.BI.Analytics
+		SccLocalPath1 = Kalitte.BI.Analytics
+		SccProjectUniqueName2 = Kalitte.BI.ServerPlatform\\Kalitte.BI.ServerPlatform.csproj
+		SccProjectName2 = Kalitte.BI.ServerPlatform
+		SccLocalPath2 = Kalitte.BI.ServerPlatform
+		SccProjectUniqueName3 = Kalitte.BI.Shared\\Kalitte.BI.Shared.csproj
+		SccProjectName3 = Kalitte.BI.Shared
+		SccLocalPath3 = Kalitte.BI.Shared
+		SccProjectUniqueName4 = Kalitte.RiskManagement.Framework\\Kalitte.RiskManagement.Framework.csproj
+		SccProjectName4 = Kalitte.RiskManagement.Framework
+		SccLocalPath4 = Kalitte.RiskManagement.Framework
+		SccProjectUniqueName5 = Kalitte.RiskManagement.Web\\Kalitte.RiskManagement.Web.csproj
+		SccProjectName5 = Kalitte.RiskManagement.Web
+		SccLocalPath5 = Kalitte.RiskManagement.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B656D0-E7C8-4DB3-9407-41630DB3D67F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B656D0-E7C8-4DB3-9407-41630DB3D67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B656D0-E7C8-4DB3-9407-41630DB3D67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B656D0-E7C8-4DB3-9407-41630DB3D67F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4FF33DC-0CB0-4BA2-9E74-A3789EDA886A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FF33DC-0CB0-4BA2-9E74-A3789EDA886A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FF33DC-0CB0-4BA2-9E74-A3789EDA886A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FF33DC-0CB0-4BA2-9E74-A3789EDA886A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D83FD81-CB27-4C99-9A0C-4E5D6CAC3B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D83FD81-CB27-4C99-9A0C-4E5D6CAC3B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D83FD81-CB27-4C99-9A0C-4E5D6CAC3B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D83FD81-CB27-4C99-9A0C-4E5D6CAC3B79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFFA2AE9-3187-4D6F-A282-E9F43B1DCC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFA2AE9-3187-4D6F-A282-E9F43B1DCC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFA2AE9-3187-4D6F-A282-E9F43B1DCC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFA2AE9-3187-4D6F-A282-E9F43B1DCC12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5899CFEA-2264-4BBD-8490-992B81E203AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5899CFEA-2264-4BBD-8490-992B81E203AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5899CFEA-2264-4BBD-8490-992B81E203AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5899CFEA-2264-4BBD-8490-992B81E203AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

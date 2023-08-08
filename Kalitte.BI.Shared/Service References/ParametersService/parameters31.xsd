@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/parameters.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Kalitte.BI.ServerPlatform.Entities" />
+  <xs:element name="GetParameters">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParametersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Kalitte.BI.ServerPlatform.Entities" minOccurs="0" name="GetParametersResult" nillable="true" type="q1:SystemParameterInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TcddPersonel" Class="RepositoryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.1.2;Initial Catalog=RiskManagement;Persist Security Info=True;User ID=sa" SettingsObjectName="Kalitte.BI.ServerPlatform.Properties.Settings" SettingsPropertyName="KalitteRepositoryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ModuleDetail" Member="ModuleDetails">
+    <Type Name="ModuleDetail">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CommandID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DetailType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DbCommand_ModuleDetail" Member="DbCommand" ThisKey="CommandID" OtherKey="ID" Type="DbCommand" IsForeignKey="true" />
+      <Association Name="Module_ModuleDetail" Member="Module" ThisKey="ModuleID" OtherKey="ID" Type="Module" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DbCommand" Member="DbCommands">
+    <Type Name="DbCommand">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tablename" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CommandName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CommandType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ConnectionString" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="DbCommand_ModuleDetail" Member="ModuleDetails" ThisKey="ID" OtherKey="CommandID" Type="ModuleDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DashboardTemplate" Member="DashboardTemplates">
+    <Type Name="DashboardTemplate">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DefaultTitle" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IconPath" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DefaultWidth" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ControlPath" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="DashboardTemplate_DashboardInstance" Member="DashboardInstances" ThisKey="ID" OtherKey="DashboardTemplateID" Type="DashboardInstance" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DashboardInstance" Member="DashboardInstances">
+    <Type Name="DashboardInstance">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DashboardTemplateID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Width" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Shared" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="DashboardTemplate_DashboardInstance" Member="DashboardTemplate" ThisKey="DashboardTemplateID" OtherKey="ID" Type="DashboardTemplate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Module" Member="Modules">
+    <Type Name="Module">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ActivatorInfo" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(100)" CanBeNull="false" />
+      <Column Name="ImageIndex" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Association Name="Module_ModuleDetail" Member="ModuleDetails" ThisKey="ID" OtherKey="ModuleID" Type="ModuleDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemParameter" Member="SystemParameters">
+    <Type Name="SystemParameter">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PortalUrl" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="DecisionSupportBrowserWinUrl" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserReportsBI" Member="UserReportsBIs">
+    <Type Name="UserReportsBI">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ReportElement" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ReportData" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Template" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

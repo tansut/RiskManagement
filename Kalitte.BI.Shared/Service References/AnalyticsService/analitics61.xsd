@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Kalitte.BI.Shared" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Kalitte.BI.Shared" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="FilterSelectData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestinationUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FilterType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Filters" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IDList" nillable="true" type="q2:ArrayOfint" />
+      <xs:element minOccurs="0" name="Key" type="ser:guid" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelectType" type="tns:DataSelectType" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FilterSelectData" nillable="true" type="tns:FilterSelectData" />
+  <xs:simpleType name="DataSelectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ID" />
+      <xs:enumeration value="IDList" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DataSelectType" nillable="true" type="tns:DataSelectType" />
+  <xs:complexType name="ArrayOfUserReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserReport" nillable="true" type="tns:UserReport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserReport" nillable="true" type="tns:ArrayOfUserReport" />
+  <xs:complexType name="UserReport">
+    <xs:sequence>
+      <xs:element name="_x003C_CreationDate_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ReportId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_ReportName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ReportType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UserName_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserReport" nillable="true" type="tns:UserReport" />
+</xs:schema>

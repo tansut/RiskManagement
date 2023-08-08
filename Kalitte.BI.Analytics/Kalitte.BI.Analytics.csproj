@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFFA2AE9-3187-4D6F-A282-E9F43B1DCC12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kalitte.BI.Analytics</RootNamespace>
+    <AssemblyName>Kalitte.BI.Analytics</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>RiskManagementSign.pfx</AssemblyOriginatorKeyFile>
+    <ManifestCertificateThumbprint>D2A641E4CCEEDDEA23D89EBFC5DE47C19BD0C16E</ManifestCertificateThumbprint>
+    <ManifestKeyFile>RiskManagementSign.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\berkay\Desktop\TcddPublishFiles\BI\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>41</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RadarSoft.Common, Version=2.0.4.27099, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Radarsoft\RadarSoft.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.CommonChart, Version=2.0.4.27110, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Radarsoft\RadarSoft.CommonChart.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.WinForms, Version=2.0.4.27103, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Radarsoft\RadarSoft.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.WinForms.Desktop, Version=2.0.4.27116, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Radarsoft\RadarSoft.WinForms.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.WinForms.Grid, Version=2.0.4.27111, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Radarsoft\RadarSoft.WinForms.Grid.dll</HintPath>
+    </Reference>
+    <Reference Include="RadarSoft.WinForms.GridChart, Version=2.0.4.27113, Culture=neutral, PublicKeyToken=674cf0e5bf72fa08, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Radarsoft\RadarSoft.WinForms.GridChart.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Solution Files\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BaseAnalyticModule.cs" />
+    <Compile Include="BIUtils.cs" />
+    <Compile Include="IAnaliticsApp.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiskAnalizModule\RiskGecmisAnalizForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiskAnalizModule\RiskGecmisAnalizForm.Designer.cs">
+      <DependentUpon>RiskGecmisAnalizForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalizModule\FactRiskGecmis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FactRiskGecmis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalizModule\SurecAnalizForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiskAnalizModule\SurecAnalizForm.Designer.cs">
+      <DependentUpon>SurecAnalizForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalizModule\FactSurec.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FactSurec.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalizModule\KontrolAnalizForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiskAnalizModule\KontrolAnalizForm.Designer.cs">
+      <DependentUpon>KontrolAnalizForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalizModule\FactKontrol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FactKontrol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalizModule\FactRisk.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FactRisk.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\UserReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UserReportsForm.Designer.cs">
+      <DependentUpon>UserReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Helpers.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiskAnalizModule\RiskGecmisAnalizForm.resx">
+      <DependentUpon>RiskGecmisAnalizForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiskAnalizModule\SurecAnalizForm.resx">
+      <DependentUpon>SurecAnalizForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiskAnalizModule\KontrolAnalizForm.resx">
+      <DependentUpon>KontrolAnalizForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiskAnalizModule\RiskAnalizForm.resx">
+      <DependentUpon>RiskAnalizForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserInterface\InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UserReportsForm.resx">
+      <DependentUpon>UserReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RiskAnalizModule\RiskAnalizForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiskAnalizModule\RiskAnalizForm.Designer.cs">
+      <DependentUpon>RiskAnalizForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalizModule\FactRisk.cs">
+      <DependentUpon>FactRisk.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RiskAnalizModule\RiskAnalizModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AnalyticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AnalyticsForm.Designer.cs">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\BrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\BrowserForm.Designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\DrillThForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\DrillThForm.Designer.cs">
+      <DependentUpon>DrillThForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FmLogin.Designer.cs">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FmUnhandled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FmUnhandled.Designer.cs">
+      <DependentUpon>FmUnhandled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FmWait.Designer.cs">
+      <DependentUpon>FmWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <None Include="RiskAnalizModule\FactKontrol.xsc">
+      <DependentUpon>FactKontrol.xsd</DependentUpon>
+    </None>
+    <None Include="RiskAnalizModule\FactKontrol.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FactKontrol.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RiskAnalizModule\FactKontrol.xss">
+      <DependentUpon>FactKontrol.xsd</DependentUpon>
+    </None>
+    <None Include="RiskAnalizModule\FactRiskGecmis.xsc">
+      <DependentUpon>FactRiskGecmis.xsd</DependentUpon>
+    </None>
+    <None Include="RiskAnalizModule\FactRiskGecmis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FactRiskGecmis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RiskAnalizModule\FactRiskGecmis.xss">
+      <DependentUpon>FactRiskGecmis.xsd</DependentUpon>
+    </None>
+    <None Include="RiskAnalizModule\FactSurec.xsc">
+      <DependentUpon>FactSurec.xsd</DependentUpon>
+    </None>
+    <None Include="RiskAnalizModule\FactSurec.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FactSurec.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RiskAnalizModule\FactSurec.xss">
+      <DependentUpon>FactSurec.xsd</DependentUpon>
+    </None>
+    <None Include="RiskManagement.cer" />
+    <None Include="RiskManagementSign.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Login.png" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UserInterface\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AnalyticsForm.resx">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\BrowserForm.resx">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\DrillThForm.resx">
+      <DependentUpon>DrillThForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FmLogin.resx">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FmUnhandled.resx">
+      <DependentUpon>FmUnhandled.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FmWait.resx">
+      <DependentUpon>FmWait.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Manager.png" />
+    <None Include="RiskAnalizModule\FactRisk.xsc">
+      <DependentUpon>FactRisk.xsd</DependentUpon>
+    </None>
+    <None Include="RiskAnalizModule\FactRisk.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FactRisk.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RiskAnalizModule\FactRisk.xss">
+      <DependentUpon>FactRisk.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pivot.png" />
+    <EmbeddedResource Include="Resources\postback.htm" />
+    <None Include="Resources\analytics-bg2.jpg" />
+    <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\floppy-disk1.png" />
+    <None Include="Resources\092.png" />
+    <None Include="Resources\Logo.jpg" />
+    <None Include="Resources\excel8.png" />
+    <None Include="Resources\cevrevesehircilik_logo.png" />
+    <Content Include="Resources\newicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kalitte.BI.Shared\Kalitte.BI.Shared.csproj">
+      <Project>{6D83FD81-CB27-4C99-9A0C-4E5D6CAC3B79}</Project>
+      <Name>Kalitte.BI.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Business\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

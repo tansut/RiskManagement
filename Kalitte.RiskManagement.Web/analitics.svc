@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Kalitte.BI.ServerPlatform.Services.AnalyticsService, Kalitte.BI.ServerPlatform" %>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Ana Sayfa" url="~/Pages/default.aspx" description="1:House">
+    <siteMapNode title="Merkezi Tanımlar" description="100" >
+      <!--<siteMapNode title="Dayanaklar" description="103:BulletStart" url="~/Pages/Management/SurecDayanakTanim/default.aspx" roles="Global Sistem Yöneticisi, Global Süreç Sorumlusu, Birim Süreç Sorumlusu" />-->
+      <siteMapNode title="Birimler" description="101:BulletStart" url="~/Pages/Management/Unit/default.aspx" roles="Global Sistem Yöneticisi, İç Denetçi, Global Süreç Sorumlusu" />
+      <siteMapNode title="Duyurular" description="114:BulletStart" url="~/Pages/Management/Duyuru/default.aspx" roles="Global Süreç Sorumlusu" />
+      <siteMapNode title="İller" description="102:BulletStart" url="~/Pages/Management/City/default.aspx" roles="Global Süreç Sorumlusu,İç Denetçi" />
+      <siteMapNode title="Oto Tamamlama" description="109:BulletStart" url="~/Pages/Management/OtoTamamla/default.aspx" roles="Global Süreç Sorumlusu" />
+      <siteMapNode title="Raporlar" description="113:BulletStart" url="~/Pages/Management/RaporTanim/default.aspx" roles="Global Süreç Sorumlusu" />
+      <siteMapNode title="Risk Grupları" description="107:BulletStart" url="~/Pages/Management/RiskGrup/default.aspx" roles="Global Süreç Sorumlusu,İç Denetçi" />
+      <siteMapNode title="Risk Matrisi" description="110:BulletStart" url="~/Pages/Management/RiskMatrisTanim/default.aspx" roles="Global Süreç Sorumlusu,İç Denetçi" />
+      <siteMapNode title="Risk Skor" description="111:BulletStart" url="~/Pages/Management/RiskScorTanim/default.aspx" roles="Global Süreç Sorumlusu,İç Denetçi" />
+      <siteMapNode title="Sorular" description="108:BulletStart" url="~/Pages/Management/Soru/default.aspx" roles="Global Süreç Sorumlusu,İç Denetçi" />
+      <siteMapNode title="Soru Grupları" description="106:BulletStart" url="~/Pages/Management/SoruGrup/default.aspx" roles="Global Süreç Sorumlusu,İç Denetçi" />
+      <siteMapNode title="Stratejik Amaçlar" description="112:BulletStart" url="~/Pages/Management/StratejikAmac/default.aspx" roles="Global Sistem Yöneticisi, Global Süreç Sorumlusu, Birim Süreç Sorumlusu, İç Denetçi" />
+      <!--<siteMapNode title="Süreç Yararlananlar" description="108:BulletStart" url="~/Pages/Management/SurecYararlananTanim/default.aspx" roles="Global Sistem Yöneticisi, Global Süreç Sorumlusu, Birim Süreç Sorumlusu" />-->
+      <siteMapNode title="Unvanlar" description="105:BulletStart" url="~/Pages/Management/Unvan/default.aspx" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu,İç Denetçi" />
+      <siteMapNode title="Yetki Tanımları" description="109:BulletStart" url="~/Pages/Management/Permission/default.aspx" roles="Global Süreç Sorumlusu"  />
+    </siteMapNode>
+
+    <siteMapNode title="Tanımlar" description="200">
+      <siteMapNode title="Çalışanlarım" description="201:BulletStart" url="~/Pages/Shared/User/default.aspx" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu, Global Sistem Yöneticisi, Birim Sistem Yöneticisi, İç Denetçi" />
+      <siteMapNode title="Puanlama Gruplarım" description="202:BulletStart" url="~/Pages/Shared/CalismaGrup/default.aspx" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu,İç Denetçi" />
+    </siteMapNode>
+
+    <siteMapNode title  ="Süreç" description="300">
+      <siteMapNode title="Süreç ve Risk Tanımları" description="301:BulletStart" url="~/Pages/Surec/default.aspx" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu, İç Denetçi, Birim Sistem Yöneticisi,Global Sistem Yöneticisi" />
+      <siteMapNode title="Risk Değerlendirme" description="302:BulletStart" url="~/Pages/Risk/default.aspx" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu, Birim Çalışanı, İç Denetçi, Birim Sistem Yöneticisi, Global Sistem Yöneticisi" />
+    </siteMapNode>
+
+    <siteMapNode title="Döküman" description="400">
+      <siteMapNode title="Puanlama Kılavuzu" description="401:BulletStart" url="~\Resource\Document\RiskPuanlamaKilavuzu.docx" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu, Birim Çalışanı, Birim Sistem Yöneticisi,İç Denetçi" />
+      <siteMapNode title="Risk Yönetimi Slaytı" description="402:BulletStart" url="~\Resource\Document\RiskYonetimiSlayt.pptx" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu, Birim Çalışanı, Birim Sistem Yöneticisi,İç Denetçi" />
+      <siteMapNode title="Kamu İç Kontrol Rehberi" description="403:BulletStart" url="~\Resource\Document\KamuIcKontrolRehberi.pdf" roles="Global Süreç Sorumlusu, Birim Süreç Sorumlusu, Birim Çalışanı, Birim Sistem Yöneticisi,İç Denetçi" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FactRiskGecmis" targetNamespace="http://tempuri.org/FactRiskGecmis.xsd" xmlns:mstns="http://tempuri.org/FactRiskGecmis.xsd" xmlns="http://tempuri.org/FactRiskGecmis.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RiskBIConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RiskBIConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Kalitte.BI.Analytics.Properties.Settings.GlobalReference.Default.RiskBIConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vFactRiskGecmisTableAdapter" GeneratorDataComponentClassName="vFactRiskGecmisTableAdapter" Name="vFactRiskGecmis" UserDataComponentName="vFactRiskGecmisTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RiskBIConnectionString (Settings)" DbObjectName="" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, RiskID, BirimID, KullaniciID, EtkiSkorTanim, OlasilikSkorTanim, ArtikEtkiSkorTanim, ArtikOlasilikSkorTanim, SkorTanim, ArtikSkorTanim, KayitTarih, Etki, Olasilik, ArtikEtki, ArtikOlasilik, Skor, ArtikSkor FROM dbo.vFactRiskGecmis</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="RiskID" DataSetColumn="RiskID" />
+              <Mapping SourceColumn="BirimID" DataSetColumn="BirimID" />
+              <Mapping SourceColumn="KullaniciID" DataSetColumn="KullaniciID" />
+              <Mapping SourceColumn="EtkiSkorTanim" DataSetColumn="EtkiSkorTanim" />
+              <Mapping SourceColumn="OlasilikSkorTanim" DataSetColumn="OlasilikSkorTanim" />
+              <Mapping SourceColumn="ArtikEtkiSkorTanim" DataSetColumn="ArtikEtkiSkorTanim" />
+              <Mapping SourceColumn="ArtikOlasilikSkorTanim" DataSetColumn="ArtikOlasilikSkorTanim" />
+              <Mapping SourceColumn="SkorTanim" DataSetColumn="SkorTanim" />
+              <Mapping SourceColumn="ArtikSkorTanim" DataSetColumn="ArtikSkorTanim" />
+              <Mapping SourceColumn="KayitTarih" DataSetColumn="KayitTarih" />
+              <Mapping SourceColumn="Etki" DataSetColumn="Etki" />
+              <Mapping SourceColumn="Olasilik" DataSetColumn="Olasilik" />
+              <Mapping SourceColumn="ArtikEtki" DataSetColumn="ArtikEtki" />
+              <Mapping SourceColumn="ArtikOlasilik" DataSetColumn="ArtikOlasilik" />
+              <Mapping SourceColumn="Skor" DataSetColumn="Skor" />
+              <Mapping SourceColumn="ArtikSkor" DataSetColumn="ArtikSkor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RiskTableAdapter" GeneratorDataComponentClassName="RiskTableAdapter" Name="Risk" UserDataComponentName="RiskTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RiskBIConnectionString (Settings)" DbObjectName="RiskManagement.dbo.Risk" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Risk] WHERE (([ID] = @Original_ID) AND ([SurecID] = @Original_SurecID) AND ([Ad] = @Original_Ad) AND ((@IsNull_Etki = 1 AND [Etki] IS NULL) OR ([Etki] = @Original_Etki)) AND ((@IsNull_Olasilik = 1 AND [Olasilik] IS NULL) OR ([Olasilik] = @Original_Olasilik)) AND ((@IsNull_ArtikEtki = 1 AND [ArtikEtki] IS NULL) OR ([ArtikEtki] = @Original_ArtikEtki)) AND ((@IsNull_ArtikOlasilik = 1 AND [ArtikOlasilik] IS NULL) OR ([ArtikOlasilik] = @Original_ArtikOlasilik)) AND ((@IsNull_Skor = 1 AND [Skor] IS NULL) OR ([Skor] = @Original_Skor)) AND ((@IsNull_ArtikSkor = 1 AND [ArtikSkor] IS NULL) OR ([ArtikSkor] = @Original_ArtikSkor)) AND ((@IsNull_SkorTanim = 1 AND [SkorTanim] IS NULL) OR ([SkorTanim] = @Original_SkorTanim)) AND ((@IsNull_ArtikSkorTanim = 1 AND [ArtikSkorTanim] IS NULL) OR ([ArtikSkorTanim] = @Original_ArtikSkorTanim)) AND ([Durum] = @Original_Durum) AND ([KullaniciID] = @Original_KullaniciID) AND ([KayitTarih] = @Original_KayitTarih) AND ((@IsNull_GuncelleyenKullaniciID = 1 AND [GuncelleyenKullaniciID] IS NULL) OR ([GuncelleyenKullaniciID] = @Original_GuncelleyenKullaniciID)) AND ((@IsNull_GuncellemeTarih = 1 AND [GuncellemeTarih] IS NULL) OR ([GuncellemeTarih] = @Original_GuncellemeTarih)) AND ([BirimID] = @Original_BirimID) AND ([CalisanGrupID] = @Original_CalisanGrupID) AND ((@IsNull_EtkiSkorTanim = 1 AND [EtkiSkorTanim] IS NULL) OR ([EtkiSkorTanim] = @Original_EtkiSkorTanim)) AND ((@IsNull_OlasilikSkorTanim = 1 AND [OlasilikSkorTanim] IS NULL) OR ([OlasilikSkorTanim] = @Original_OlasilikSkorTanim)) AND ((@IsNull_ArtikEtkiSkorTanim = 1 AND [ArtikEtkiSkorTanim] IS NULL) OR ([ArtikEtkiSkorTanim] = @Original_ArtikEtkiSkorTanim)) AND ((@IsNull_ArtikOlasilikSkorTanim = 1 AND [ArtikOlasilikSkorTanim] IS NULL) OR ([ArtikOlasilikSkorTanim] = @Original_ArtikOlasilikSkorTanim)) AND ((@IsNull_SkorRenk = 1 AND [SkorRenk] IS NULL) OR ([SkorRenk] = @Original_SkorRenk)) AND ((@IsNull_ArtikSkorRenk = 1 AND [ArtikSkorRenk] IS NULL) OR ([ArtikSkorRenk] = @Original_ArtikSkorRenk)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SurecID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SurecID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Etki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Etki" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Etki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Etki" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Olasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Olasilik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Olasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Olasilik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikEtki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtki" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ArtikEtki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtki" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikOlasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ArtikOlasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Skor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Skor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Skor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Skor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikSkor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ArtikSkor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_KullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="KullaniciID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_KayitTarih" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="KayitTarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GuncelleyenKullaniciID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GuncelleyenKullaniciID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_GuncelleyenKullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="GuncelleyenKullaniciID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GuncellemeTarih" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GuncellemeTarih" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_GuncellemeTarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="GuncellemeTarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CalisanGrupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CalisanGrupID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EtkiSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EtkiSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OlasilikSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OlasilikSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikEtkiSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtkiSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikEtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikEtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikOlasilikSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilikSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikOlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikOlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SkorRenk" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SkorRenk" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorRenk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikSkorRenk" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkorRenk" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikSkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorRenk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Risk] ([SurecID], [Ad], [Etki], [Olasilik], [ArtikEtki], [ArtikOlasilik], [Skor], [ArtikSkor], [SkorTanim], [ArtikSkorTanim], [Aciklama], [Durum], [KullaniciID], [KayitTarih], [GuncelleyenKullaniciID], [GuncellemeTarih], [BirimID], [CalisanGrupID], [EtkiSkorTanim], [OlasilikSkorTanim], [ArtikEtkiSkorTanim], [ArtikOlasilikSkorTanim], [SkorRenk], [ArtikSkorRenk]) VALUES (@SurecID, @Ad, @Etki, @Olasilik, @ArtikEtki, @ArtikOlasilik, @Skor, @ArtikSkor, @SkorTanim, @ArtikSkorTanim, @Aciklama, @Durum, @KullaniciID, @KayitTarih, @GuncelleyenKullaniciID, @GuncellemeTarih, @BirimID, @CalisanGrupID, @EtkiSkorTanim, @OlasilikSkorTanim, @ArtikEtkiSkorTanim, @ArtikOlasilikSkorTanim, @SkorRenk, @ArtikSkorRenk);
+SELECT ID, SurecID, Ad, Etki, Olasilik, ArtikEtki, ArtikOlasilik, Skor, ArtikSkor, SkorTanim, ArtikSkorTanim, Aciklama, Durum, KullaniciID, KayitTarih, GuncelleyenKullaniciID, GuncellemeTarih, BirimID, CalisanGrupID, EtkiSkorTanim, OlasilikSkorTanim, ArtikEtkiSkorTanim, ArtikOlasilikSkorTanim, SkorRenk, ArtikSkorRenk FROM Risk WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SurecID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SurecID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Etki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Etki" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Olasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Olasilik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ArtikEtki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtki" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ArtikOlasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Skor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Skor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ArtikSkor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Aciklama" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@KullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="KullaniciID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@KayitTarih" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="KayitTarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@GuncelleyenKullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="GuncelleyenKullaniciID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@GuncellemeTarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="GuncellemeTarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CalisanGrupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CalisanGrupID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikEtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikEtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikOlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikOlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorRenk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikSkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorRenk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, SurecID, Ad, Etki, Olasilik, ArtikEtki, ArtikOlasilik, Skor, ArtikSkor, SkorTanim, ArtikSkorTanim, Aciklama, Durum, KullaniciID, KayitTarih, GuncelleyenKullaniciID, GuncellemeTarih, BirimID, CalisanGrupID, EtkiSkorTanim, OlasilikSkorTanim, ArtikEtkiSkorTanim, ArtikOlasilikSkorTanim, SkorRenk, ArtikSkorRenk FROM dbo.Risk</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Risk] SET [SurecID] = @SurecID, [Ad] = @Ad, [Etki] = @Etki, [Olasilik] = @Olasilik, [ArtikEtki] = @ArtikEtki, [ArtikOlasilik] = @ArtikOlasilik, [Skor] = @Skor, [ArtikSkor] = @ArtikSkor, [SkorTanim] = @SkorTanim, [ArtikSkorTanim] = @ArtikSkorTanim, [Aciklama] = @Aciklama, [Durum] = @Durum, [KullaniciID] = @KullaniciID, [KayitTarih] = @KayitTarih, [GuncelleyenKullaniciID] = @GuncelleyenKullaniciID, [GuncellemeTarih] = @GuncellemeTarih, [BirimID] = @BirimID, [CalisanGrupID] = @CalisanGrupID, [EtkiSkorTanim] = @EtkiSkorTanim, [OlasilikSkorTanim] = @OlasilikSkorTanim, [ArtikEtkiSkorTanim] = @ArtikEtkiSkorTanim, [ArtikOlasilikSkorTanim] = @ArtikOlasilikSkorTanim, [SkorRenk] = @SkorRenk, [ArtikSkorRenk] = @ArtikSkorRenk WHERE (([ID] = @Original_ID) AND ([SurecID] = @Original_SurecID) AND ([Ad] = @Original_Ad) AND ((@IsNull_Etki = 1 AND [Etki] IS NULL) OR ([Etki] = @Original_Etki)) AND ((@IsNull_Olasilik = 1 AND [Olasilik] IS NULL) OR ([Olasilik] = @Original_Olasilik)) AND ((@IsNull_ArtikEtki = 1 AND [ArtikEtki] IS NULL) OR ([ArtikEtki] = @Original_ArtikEtki)) AND ((@IsNull_ArtikOlasilik = 1 AND [ArtikOlasilik] IS NULL) OR ([ArtikOlasilik] = @Original_ArtikOlasilik)) AND ((@IsNull_Skor = 1 AND [Skor] IS NULL) OR ([Skor] = @Original_Skor)) AND ((@IsNull_ArtikSkor = 1 AND [ArtikSkor] IS NULL) OR ([ArtikSkor] = @Original_ArtikSkor)) AND ((@IsNull_SkorTanim = 1 AND [SkorTanim] IS NULL) OR ([SkorTanim] = @Original_SkorTanim)) AND ((@IsNull_ArtikSkorTanim = 1 AND [ArtikSkorTanim] IS NULL) OR ([ArtikSkorTanim] = @Original_ArtikSkorTanim)) AND ([Durum] = @Original_Durum) AND ([KullaniciID] = @Original_KullaniciID) AND ([KayitTarih] = @Original_KayitTarih) AND ((@IsNull_GuncelleyenKullaniciID = 1 AND [GuncelleyenKullaniciID] IS NULL) OR ([GuncelleyenKullaniciID] = @Original_GuncelleyenKullaniciID)) AND ((@IsNull_GuncellemeTarih = 1 AND [GuncellemeTarih] IS NULL) OR ([GuncellemeTarih] = @Original_GuncellemeTarih)) AND ([BirimID] = @Original_BirimID) AND ([CalisanGrupID] = @Original_CalisanGrupID) AND ((@IsNull_EtkiSkorTanim = 1 AND [EtkiSkorTanim] IS NULL) OR ([EtkiSkorTanim] = @Original_EtkiSkorTanim)) AND ((@IsNull_OlasilikSkorTanim = 1 AND [OlasilikSkorTanim] IS NULL) OR ([OlasilikSkorTanim] = @Original_OlasilikSkorTanim)) AND ((@IsNull_ArtikEtkiSkorTanim = 1 AND [ArtikEtkiSkorTanim] IS NULL) OR ([ArtikEtkiSkorTanim] = @Original_ArtikEtkiSkorTanim)) AND ((@IsNull_ArtikOlasilikSkorTanim = 1 AND [ArtikOlasilikSkorTanim] IS NULL) OR ([ArtikOlasilikSkorTanim] = @Original_ArtikOlasilikSkorTanim)) AND ((@IsNull_SkorRenk = 1 AND [SkorRenk] IS NULL) OR ([SkorRenk] = @Original_SkorRenk)) AND ((@IsNull_ArtikSkorRenk = 1 AND [ArtikSkorRenk] IS NULL) OR ([ArtikSkorRenk] = @Original_ArtikSkorRenk)));
+SELECT ID, SurecID, Ad, Etki, Olasilik, ArtikEtki, ArtikOlasilik, Skor, ArtikSkor, SkorTanim, ArtikSkorTanim, Aciklama, Durum, KullaniciID, KayitTarih, GuncelleyenKullaniciID, GuncellemeTarih, BirimID, CalisanGrupID, EtkiSkorTanim, OlasilikSkorTanim, ArtikEtkiSkorTanim, ArtikOlasilikSkorTanim, SkorRenk, ArtikSkorRenk FROM Risk WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SurecID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SurecID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Etki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Etki" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Olasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Olasilik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ArtikEtki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtki" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ArtikOlasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Skor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Skor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ArtikSkor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Aciklama" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Durum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@KullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="KullaniciID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@KayitTarih" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="KayitTarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@GuncelleyenKullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="GuncelleyenKullaniciID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@GuncellemeTarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="GuncellemeTarih" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CalisanGrupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CalisanGrupID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikEtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikEtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikOlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikOlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorRenk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArtikSkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorRenk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SurecID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SurecID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Etki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Etki" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Etki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Etki" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Olasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Olasilik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Olasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Olasilik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikEtki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtki" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ArtikEtki" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtki" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikOlasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ArtikOlasilik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Skor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Skor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Skor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Skor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikSkor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ArtikSkor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Durum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Durum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_KullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="KullaniciID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_KayitTarih" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="KayitTarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GuncelleyenKullaniciID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GuncelleyenKullaniciID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_GuncelleyenKullaniciID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="GuncelleyenKullaniciID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GuncellemeTarih" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GuncellemeTarih" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_GuncellemeTarih" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="GuncellemeTarih" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CalisanGrupID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CalisanGrupID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EtkiSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EtkiSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OlasilikSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OlasilikSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikEtkiSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikEtkiSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikEtkiSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikEtkiSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikOlasilikSkorTanim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikOlasilikSkorTanim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikOlasilikSkorTanim" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikOlasilikSkorTanim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SkorRenk" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SkorRenk" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SkorRenk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArtikSkorRenk" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArtikSkorRenk" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArtikSkorRenk" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArtikSkorRenk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="SurecID" DataSetColumn="SurecID" />
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Etki" DataSetColumn="Etki" />
+              <Mapping SourceColumn="Olasilik" DataSetColumn="Olasilik" />
+              <Mapping SourceColumn="ArtikEtki" DataSetColumn="ArtikEtki" />
+              <Mapping SourceColumn="ArtikOlasilik" DataSetColumn="ArtikOlasilik" />
+              <Mapping SourceColumn="Skor" DataSetColumn="Skor" />
+              <Mapping SourceColumn="ArtikSkor" DataSetColumn="ArtikSkor" />
+              <Mapping SourceColumn="SkorTanim" DataSetColumn="SkorTanim" />
+              <Mapping SourceColumn="ArtikSkorTanim" DataSetColumn="ArtikSkorTanim" />
+              <Mapping SourceColumn="Aciklama" DataSetColumn="Aciklama" />
+              <Mapping SourceColumn="Durum" DataSetColumn="Durum" />
+              <Mapping SourceColumn="KullaniciID" DataSetColumn="KullaniciID" />
+              <Mapping SourceColumn="KayitTarih" DataSetColumn="KayitTarih" />
+              <Mapping SourceColumn="GuncelleyenKullaniciID" DataSetColumn="GuncelleyenKullaniciID" />
+              <Mapping SourceColumn="GuncellemeTarih" DataSetColumn="GuncellemeTarih" />
+              <Mapping SourceColumn="BirimID" DataSetColumn="BirimID" />
+              <Mapping SourceColumn="CalisanGrupID" DataSetColumn="CalisanGrupID" />
+              <Mapping SourceColumn="EtkiSkorTanim" DataSetColumn="EtkiSkorTanim" />
+              <Mapping SourceColumn="OlasilikSkorTanim" DataSetColumn="OlasilikSkorTanim" />
+              <Mapping SourceColumn="ArtikEtkiSkorTanim" DataSetColumn="ArtikEtkiSkorTanim" />
+              <Mapping SourceColumn="ArtikOlasilikSkorTanim" DataSetColumn="ArtikOlasilikSkorTanim" />
+              <Mapping SourceColumn="SkorRenk" DataSetColumn="SkorRenk" />
+              <Mapping SourceColumn="ArtikSkorRenk" DataSetColumn="ArtikSkorRenk" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BirimTableAdapter" GeneratorDataComponentClassName="BirimTableAdapter" Name="Birim" UserDataComponentName="BirimTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RiskBIConnectionString (Settings)" DbObjectName="RiskManagement.dbo.Birim" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Birim] WHERE (([ID] = @Original_ID) AND ([Ad] = @Original_Ad) AND ((@IsNull_UstBirimID = 1 AND [UstBirimID] IS NULL) OR ([UstBirimID] = @Original_UstBirimID)) AND ([ILID] = @Original_ILID) AND ([Sanal] = @Original_Sanal))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UstBirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UstBirimID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_UstBirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UstBirimID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ILID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ILID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Sanal" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Sanal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Birim] ([Ad], [Aciklama], [UstBirimID], [ILID], [Sanal]) VALUES (@Ad, @Aciklama, @UstBirimID, @ILID, @Sanal);
+SELECT ID, Ad, Aciklama, UstBirimID, ILID, Sanal FROM Birim WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Aciklama" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UstBirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UstBirimID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ILID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ILID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Sanal" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Sanal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Ad, Aciklama, UstBirimID, ILID, Sanal FROM dbo.Birim</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Birim] SET [Ad] = @Ad, [Aciklama] = @Aciklama, [UstBirimID] = @UstBirimID, [ILID] = @ILID, [Sanal] = @Sanal WHERE (([ID] = @Original_ID) AND ([Ad] = @Original_Ad) AND ((@IsNull_UstBirimID = 1 AND [UstBirimID] IS NULL) OR ([UstBirimID] = @Original_UstBirimID)) AND ([ILID] = @Original_ILID) AND ([Sanal] = @Original_Sanal));
+SELECT ID, Ad, Aciklama, UstBirimID, ILID, Sanal FROM Birim WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Aciklama" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="Aciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UstBirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UstBirimID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ILID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ILID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Sanal" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Sanal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UstBirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UstBirimID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_UstBirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UstBirimID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ILID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ILID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Sanal" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Sanal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Aciklama" DataSetColumn="Aciklama" />
+              <Mapping SourceColumn="UstBirimID" DataSetColumn="UstBirimID" />
+              <Mapping SourceColumn="ILID" DataSetColumn="ILID" />
+              <Mapping SourceColumn="Sanal" DataSetColumn="Sanal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="aspnet_UsersTableAdapter" GeneratorDataComponentClassName="aspnet_UsersTableAdapter" Name="aspnet_Users" UserDataComponentName="aspnet_UsersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RiskBIConnectionString (Settings)" DbObjectName="RiskManagement.dbo.aspnet_Users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[aspnet_Users] WHERE (([ApplicationId] = @Original_ApplicationId) AND ([UserId] = @Original_UserId) AND ([UserName] = @Original_UserName) AND ([LoweredUserName] = @Original_LoweredUserName) AND ((@IsNull_MobileAlias = 1 AND [MobileAlias] IS NULL) OR ([MobileAlias] = @Original_MobileAlias)) AND ([IsAnonymous] = @Original_IsAnonymous) AND ([LastActivityDate] = @Original_LastActivityDate) AND ((@IsNull_BirimID = 1 AND [BirimID] IS NULL) OR ([BirimID] = @Original_BirimID)) AND ((@IsNull_UnvanID = 1 AND [UnvanID] IS NULL) OR ([UnvanID] = @Original_UnvanID)) AND ((@IsNull_Ad = 1 AND [Ad] IS NULL) OR ([Ad] = @Original_Ad)) AND ((@IsNull_Soyad = 1 AND [Soyad] IS NULL) OR ([Soyad] = @Original_Soyad)) AND ([ID] = @Original_ID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_ApplicationId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ApplicationId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LoweredUserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoweredUserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MobileAlias" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MobileAlias" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MobileAlias" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MobileAlias" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsAnonymous" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAnonymous" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_LastActivityDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="LastActivityDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnvanID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnvanID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_UnvanID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnvanID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Soyad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Soyad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Soyad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[aspnet_Users] ([ApplicationId], [UserId], [UserName], [LoweredUserName], [MobileAlias], [IsAnonymous], [LastActivityDate], [BirimID], [UnvanID], [Ad], [Soyad]) VALUES (@ApplicationId, @UserId, @UserName, @LoweredUserName, @MobileAlias, @IsAnonymous, @LastActivityDate, @BirimID, @UnvanID, @Ad, @Soyad);
+SELECT ApplicationId, UserId, UserName, LoweredUserName, MobileAlias, IsAnonymous, LastActivityDate, BirimID, UnvanID, Ad, Soyad, ID FROM aspnet_Users WHERE (UserId = @UserId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@ApplicationId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ApplicationId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoweredUserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoweredUserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MobileAlias" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MobileAlias" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsAnonymous" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAnonymous" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@LastActivityDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="LastActivityDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UnvanID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnvanID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Soyad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ApplicationId, UserId, UserName, LoweredUserName, MobileAlias, IsAnonymous, LastActivityDate, BirimID, UnvanID, Ad, Soyad, ID FROM dbo.aspnet_Users</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[aspnet_Users] SET [ApplicationId] = @ApplicationId, [UserId] = @UserId, [UserName] = @UserName, [LoweredUserName] = @LoweredUserName, [MobileAlias] = @MobileAlias, [IsAnonymous] = @IsAnonymous, [LastActivityDate] = @LastActivityDate, [BirimID] = @BirimID, [UnvanID] = @UnvanID, [Ad] = @Ad, [Soyad] = @Soyad WHERE (([ApplicationId] = @Original_ApplicationId) AND ([UserId] = @Original_UserId) AND ([UserName] = @Original_UserName) AND ([LoweredUserName] = @Original_LoweredUserName) AND ((@IsNull_MobileAlias = 1 AND [MobileAlias] IS NULL) OR ([MobileAlias] = @Original_MobileAlias)) AND ([IsAnonymous] = @Original_IsAnonymous) AND ([LastActivityDate] = @Original_LastActivityDate) AND ((@IsNull_BirimID = 1 AND [BirimID] IS NULL) OR ([BirimID] = @Original_BirimID)) AND ((@IsNull_UnvanID = 1 AND [UnvanID] IS NULL) OR ([UnvanID] = @Original_UnvanID)) AND ((@IsNull_Ad = 1 AND [Ad] IS NULL) OR ([Ad] = @Original_Ad)) AND ((@IsNull_Soyad = 1 AND [Soyad] IS NULL) OR ([Soyad] = @Original_Soyad)) AND ([ID] = @Original_ID));
+SELECT ApplicationId, UserId, UserName, LoweredUserName, MobileAlias, IsAnonymous, LastActivityDate, BirimID, UnvanID, Ad, Soyad, ID FROM aspnet_Users WHERE (UserId = @UserId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@ApplicationId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ApplicationId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoweredUserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoweredUserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MobileAlias" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MobileAlias" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsAnonymous" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAnonymous" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@LastActivityDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="LastActivityDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UnvanID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnvanID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Soyad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_ApplicationId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ApplicationId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LoweredUserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoweredUserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MobileAlias" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MobileAlias" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MobileAlias" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MobileAlias" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsAnonymous" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAnonymous" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_LastActivityDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="LastActivityDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_BirimID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BirimID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnvanID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnvanID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_UnvanID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnvanID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Ad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Soyad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Soyad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Soyad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ApplicationId" DataSetColumn="ApplicationId" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="LoweredUserName" DataSetColumn="LoweredUserName" />
+              <Mapping SourceColumn="MobileAlias" DataSetColumn="MobileAlias" />
+              <Mapping SourceColumn="IsAnonymous" DataSetColumn="IsAnonymous" />
+              <Mapping SourceColumn="LastActivityDate" DataSetColumn="LastActivityDate" />
+              <Mapping SourceColumn="BirimID" DataSetColumn="BirimID" />
+              <Mapping SourceColumn="UnvanID" DataSetColumn="UnvanID" />
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Soyad" DataSetColumn="Soyad" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FactRiskGecmis" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FactRiskGecmis" msprop:Generator_UserDSName="FactRiskGecmis">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vFactRiskGecmis" msprop:Generator_TableClassName="vFactRiskGecmisDataTable" msprop:Generator_TableVarName="tablevFactRiskGecmis" msprop:Generator_TablePropName="vFactRiskGecmis" msprop:Generator_RowDeletingName="vFactRiskGecmisRowDeleting" msprop:Generator_UserTableName="vFactRiskGecmis" msprop:Generator_RowChangingName="vFactRiskGecmisRowChanging" msprop:Generator_RowEvHandlerName="vFactRiskGecmisRowChangeEventHandler" msprop:Generator_RowDeletedName="vFactRiskGecmisRowDeleted" msprop:Generator_RowEvArgName="vFactRiskGecmisRowChangeEvent" msprop:Generator_RowChangedName="vFactRiskGecmisRowChanged" msprop:Generator_RowClassName="vFactRiskGecmisRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RiskID" msprop:Generator_ColumnVarNameInTable="columnRiskID" msprop:Generator_ColumnPropNameInRow="RiskID" msprop:Generator_ColumnPropNameInTable="RiskIDColumn" msprop:Generator_UserColumnName="RiskID" type="xs:int" />
+              <xs:element name="BirimID" msprop:Generator_ColumnVarNameInTable="columnBirimID" msprop:Generator_ColumnPropNameInRow="BirimID" msprop:Generator_ColumnPropNameInTable="BirimIDColumn" msprop:Generator_UserColumnName="BirimID" type="xs:int" />
+              <xs:element name="KullaniciID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnKullaniciID" msprop:Generator_ColumnPropNameInRow="KullaniciID" msprop:Generator_ColumnPropNameInTable="KullaniciIDColumn" msprop:Generator_UserColumnName="KullaniciID" type="xs:string" />
+              <xs:element name="EtkiSkorTanim" msprop:Generator_ColumnVarNameInTable="columnEtkiSkorTanim" msprop:Generator_ColumnPropNameInRow="EtkiSkorTanim" msprop:Generator_ColumnPropNameInTable="EtkiSkorTanimColumn" msprop:Generator_UserColumnName="EtkiSkorTanim">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OlasilikSkorTanim" msprop:Generator_ColumnVarNameInTable="columnOlasilikSkorTanim" msprop:Generator_ColumnPropNameInRow="OlasilikSkorTanim" msprop:Generator_ColumnPropNameInTable="OlasilikSkorTanimColumn" msprop:Generator_UserColumnName="OlasilikSkorTanim">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtikEtkiSkorTanim" msprop:Generator_ColumnVarNameInTable="columnArtikEtkiSkorTanim" msprop:Generator_ColumnPropNameInRow="ArtikEtkiSkorTanim" msprop:Generator_ColumnPropNameInTable="ArtikEtkiSkorTanimColumn" msprop:Generator_UserColumnName="ArtikEtkiSkorTanim">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtikOlasilikSkorTanim" msprop:Generator_ColumnVarNameInTable="columnArtikOlasilikSkorTanim" msprop:Generator_ColumnPropNameInRow="ArtikOlasilikSkorTanim" msprop:Generator_ColumnPropNameInTable="ArtikOlasilikSkorTanimColumn" msprop:Generator_UserColumnName="ArtikOlasilikSkorTanim">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SkorTanim" msprop:Generator_ColumnVarNameInTable="columnSkorTanim" msprop:Generator_ColumnPropNameInRow="SkorTanim" msprop:Generator_ColumnPropNameInTable="SkorTanimColumn" msprop:Generator_UserColumnName="SkorTanim">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtikSkorTanim" msprop:Generator_ColumnVarNameInTable="columnArtikSkorTanim" msprop:Generator_ColumnPropNameInRow="ArtikSkorTanim" msprop:Generator_ColumnPropNameInTable="ArtikSkorTanimColumn" msprop:Generator_UserColumnName="ArtikSkorTanim">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KayitTarih" msprop:Generator_ColumnVarNameInTable="columnKayitTarih" msprop:Generator_ColumnPropNameInRow="KayitTarih" msprop:Generator_ColumnPropNameInTable="KayitTarihColumn" msprop:Generator_UserColumnName="KayitTarih" type="xs:dateTime" />
+              <xs:element name="Etki" msprop:Generator_ColumnVarNameInTable="columnEtki" msprop:Generator_ColumnPropNameInRow="Etki" msprop:Generator_ColumnPropNameInTable="EtkiColumn" msprop:Generator_UserColumnName="Etki" type="xs:int" />
+              <xs:element name="Olasilik" msprop:Generator_ColumnVarNameInTable="columnOlasilik" msprop:Generator_ColumnPropNameInRow="Olasilik" msprop:Generator_ColumnPropNameInTable="OlasilikColumn" msprop:Generator_UserColumnName="Olasilik" type="xs:int" />
+              <xs:element name="ArtikEtki" msprop:Generator_ColumnVarNameInTable="columnArtikEtki" msprop:Generator_ColumnPropNameInRow="ArtikEtki" msprop:Generator_ColumnPropNameInTable="ArtikEtkiColumn" msprop:Generator_UserColumnName="ArtikEtki" type="xs:int" />
+              <xs:element name="ArtikOlasilik" msprop:Generator_ColumnVarNameInTable="columnArtikOlasilik" msprop:Generator_ColumnPropNameInRow="ArtikOlasilik" msprop:Generator_ColumnPropNameInTable="ArtikOlasilikColumn" msprop:Generator_UserColumnName="ArtikOlasilik" type="xs:int" />
+              <xs:element name="Skor" msprop:Generator_ColumnVarNameInTable="columnSkor" msprop:Generator_ColumnPropNameInRow="Skor" msprop:Generator_ColumnPropNameInTable="SkorColumn" msprop:Generator_UserColumnName="Skor" type="xs:int" />
+              <xs:element name="ArtikSkor" msprop:Generator_ColumnVarNameInTable="columnArtikSkor" msprop:Generator_ColumnPropNameInRow="ArtikSkor" msprop:Generator_ColumnPropNameInTable="ArtikSkorColumn" msprop:Generator_UserColumnName="ArtikSkor" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Risk" msprop:Generator_TableClassName="RiskDataTable" msprop:Generator_TableVarName="tableRisk" msprop:Generator_TablePropName="Risk" msprop:Generator_RowDeletingName="RiskRowDeleting" msprop:Generator_UserTableName="Risk" msprop:Generator_RowChangingName="RiskRowChanging" msprop:Generator_RowEvHandlerName="RiskRowChangeEventHandler" msprop:Generator_RowDeletedName="RiskRowDeleted" msprop:Generator_RowEvArgName="RiskRowChangeEvent" msprop:Generator_RowChangedName="RiskRowChanged" msprop:Generator_RowClassName="RiskRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="SurecID" msprop:Generator_ColumnVarNameInTable="columnSurecID" msprop:Generator_ColumnPropNameInRow="SurecID" msprop:Generator_ColumnPropNameInTable="SurecIDColumn" msprop:Generator_UserColumnName="SurecID" type="xs:int" />
+              <xs:element name="Ad" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_UserColumnName="Ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Etki" msprop:Generator_ColumnVarNameInTable="columnEtki" msprop:Generator_ColumnPropNameInRow="Etki" msprop:Generator_ColumnPropNameInTable="EtkiColumn" msprop:Generator_UserColumnName="Etki" type="xs:int" minOccurs="0" />
+              <xs:element name="Olasilik" msprop:Generator_ColumnVarNameInTable="columnOlasilik" msprop:Generator_ColumnPropNameInRow="Olasilik" msprop:Generator_ColumnPropNameInTable="OlasilikColumn" msprop:Generator_UserColumnName="Olasilik" type="xs:int" minOccurs="0" />
+              <xs:element name="ArtikEtki" msprop:Generator_ColumnVarNameInTable="columnArtikEtki" msprop:Generator_ColumnPropNameInRow="ArtikEtki" msprop:Generator_ColumnPropNameInTable="ArtikEtkiColumn" msprop:Generator_UserColumnName="ArtikEtki" type="xs:int" minOccurs="0" />
+              <xs:element name="ArtikOlasilik" msprop:Generator_ColumnVarNameInTable="columnArtikOlasilik" msprop:Generator_ColumnPropNameInRow="ArtikOlasilik" msprop:Generator_ColumnPropNameInTable="ArtikOlasilikColumn" msprop:Generator_UserColumnName="ArtikOlasilik" type="xs:int" minOccurs="0" />
+              <xs:element name="Skor" msprop:Generator_ColumnVarNameInTable="columnSkor" msprop:Generator_ColumnPropNameInRow="Skor" msprop:Generator_ColumnPropNameInTable="SkorColumn" msprop:Generator_UserColumnName="Skor" type="xs:int" minOccurs="0" />
+              <xs:element name="ArtikSkor" msprop:Generator_ColumnVarNameInTable="columnArtikSkor" msprop:Generator_ColumnPropNameInRow="ArtikSkor" msprop:Generator_ColumnPropNameInTable="ArtikSkorColumn" msprop:Generator_UserColumnName="ArtikSkor" type="xs:int" minOccurs="0" />
+              <xs:element name="SkorTanim" msprop:Generator_ColumnVarNameInTable="columnSkorTanim" msprop:Generator_ColumnPropNameInRow="SkorTanim" msprop:Generator_ColumnPropNameInTable="SkorTanimColumn" msprop:Generator_UserColumnName="SkorTanim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtikSkorTanim" msprop:Generator_ColumnVarNameInTable="columnArtikSkorTanim" msprop:Generator_ColumnPropNameInRow="ArtikSkorTanim" msprop:Generator_ColumnPropNameInTable="ArtikSkorTanimColumn" msprop:Generator_UserColumnName="ArtikSkorTanim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Aciklama" msprop:Generator_ColumnVarNameInTable="columnAciklama" msprop:Generator_ColumnPropNameInRow="Aciklama" msprop:Generator_ColumnPropNameInTable="AciklamaColumn" msprop:Generator_UserColumnName="Aciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Durum" msprop:Generator_ColumnVarNameInTable="columnDurum" msprop:Generator_ColumnPropNameInRow="Durum" msprop:Generator_ColumnPropNameInTable="DurumColumn" msprop:Generator_UserColumnName="Durum">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KullaniciID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnKullaniciID" msprop:Generator_ColumnPropNameInRow="KullaniciID" msprop:Generator_ColumnPropNameInTable="KullaniciIDColumn" msprop:Generator_UserColumnName="KullaniciID" type="xs:string" />
+              <xs:element name="KayitTarih" msprop:Generator_ColumnVarNameInTable="columnKayitTarih" msprop:Generator_ColumnPropNameInRow="KayitTarih" msprop:Generator_ColumnPropNameInTable="KayitTarihColumn" msprop:Generator_UserColumnName="KayitTarih" type="xs:dateTime" />
+              <xs:element name="GuncelleyenKullaniciID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnGuncelleyenKullaniciID" msprop:Generator_ColumnPropNameInRow="GuncelleyenKullaniciID" msprop:Generator_ColumnPropNameInTable="GuncelleyenKullaniciIDColumn" msprop:Generator_UserColumnName="GuncelleyenKullaniciID" type="xs:string" minOccurs="0" />
+              <xs:element name="GuncellemeTarih" msprop:Generator_ColumnVarNameInTable="columnGuncellemeTarih" msprop:Generator_ColumnPropNameInRow="GuncellemeTarih" msprop:Generator_ColumnPropNameInTable="GuncellemeTarihColumn" msprop:Generator_UserColumnName="GuncellemeTarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BirimID" msprop:Generator_ColumnVarNameInTable="columnBirimID" msprop:Generator_ColumnPropNameInRow="BirimID" msprop:Generator_ColumnPropNameInTable="BirimIDColumn" msprop:Generator_UserColumnName="BirimID" type="xs:int" />
+              <xs:element name="CalisanGrupID" msprop:Generator_ColumnVarNameInTable="columnCalisanGrupID" msprop:Generator_ColumnPropNameInRow="CalisanGrupID" msprop:Generator_ColumnPropNameInTable="CalisanGrupIDColumn" msprop:Generator_UserColumnName="CalisanGrupID" type="xs:int" />
+              <xs:element name="EtkiSkorTanim" msprop:Generator_ColumnVarNameInTable="columnEtkiSkorTanim" msprop:Generator_ColumnPropNameInRow="EtkiSkorTanim" msprop:Generator_ColumnPropNameInTable="EtkiSkorTanimColumn" msprop:Generator_UserColumnName="EtkiSkorTanim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OlasilikSkorTanim" msprop:Generator_ColumnVarNameInTable="columnOlasilikSkorTanim" msprop:Generator_ColumnPropNameInRow="OlasilikSkorTanim" msprop:Generator_ColumnPropNameInTable="OlasilikSkorTanimColumn" msprop:Generator_UserColumnName="OlasilikSkorTanim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtikEtkiSkorTanim" msprop:Generator_ColumnVarNameInTable="columnArtikEtkiSkorTanim" msprop:Generator_ColumnPropNameInRow="ArtikEtkiSkorTanim" msprop:Generator_ColumnPropNameInTable="ArtikEtkiSkorTanimColumn" msprop:Generator_UserColumnName="ArtikEtkiSkorTanim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtikOlasilikSkorTanim" msprop:Generator_ColumnVarNameInTable="columnArtikOlasilikSkorTanim" msprop:Generator_ColumnPropNameInRow="ArtikOlasilikSkorTanim" msprop:Generator_ColumnPropNameInTable="ArtikOlasilikSkorTanimColumn" msprop:Generator_UserColumnName="ArtikOlasilikSkorTanim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SkorRenk" msprop:Generator_ColumnVarNameInTable="columnSkorRenk" msprop:Generator_ColumnPropNameInRow="SkorRenk" msprop:Generator_ColumnPropNameInTable="SkorRenkColumn" msprop:Generator_UserColumnName="SkorRenk" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArtikSkorRenk" msprop:Generator_ColumnVarNameInTable="columnArtikSkorRenk" msprop:Generator_ColumnPropNameInRow="ArtikSkorRenk" msprop:Generator_ColumnPropNameInTable="ArtikSkorRenkColumn" msprop:Generator_UserColumnName="ArtikSkorRenk" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Birim" msprop:Generator_TableClassName="BirimDataTable" msprop:Generator_TableVarName="tableBirim" msprop:Generator_TablePropName="Birim" msprop:Generator_RowDeletingName="BirimRowDeleting" msprop:Generator_UserTableName="Birim" msprop:Generator_RowChangingName="BirimRowChanging" msprop:Generator_RowEvHandlerName="BirimRowChangeEventHandler" msprop:Generator_RowDeletedName="BirimRowDeleted" msprop:Generator_RowEvArgName="BirimRowChangeEvent" msprop:Generator_RowChangedName="BirimRowChanged" msprop:Generator_RowClassName="BirimRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Ad" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_UserColumnName="Ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Aciklama" msprop:Generator_ColumnVarNameInTable="columnAciklama" msprop:Generator_ColumnPropNameInRow="Aciklama" msprop:Generator_ColumnPropNameInTable="AciklamaColumn" msprop:Generator_UserColumnName="Aciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UstBirimID" msprop:Generator_ColumnVarNameInTable="columnUstBirimID" msprop:Generator_ColumnPropNameInRow="UstBirimID" msprop:Generator_ColumnPropNameInTable="UstBirimIDColumn" msprop:Generator_UserColumnName="UstBirimID" type="xs:int" minOccurs="0" />
+              <xs:element name="ILID" msprop:Generator_ColumnVarNameInTable="columnILID" msprop:Generator_ColumnPropNameInRow="ILID" msprop:Generator_ColumnPropNameInTable="ILIDColumn" msprop:Generator_UserColumnName="ILID" type="xs:int" />
+              <xs:element name="Sanal" msprop:Generator_ColumnVarNameInTable="columnSanal" msprop:Generator_ColumnPropNameInRow="Sanal" msprop:Generator_ColumnPropNameInTable="SanalColumn" msprop:Generator_UserColumnName="Sanal" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="aspnet_Users" msprop:Generator_TableClassName="aspnet_UsersDataTable" msprop:Generator_TableVarName="tableaspnet_Users" msprop:Generator_TablePropName="aspnet_Users" msprop:Generator_RowDeletingName="aspnet_UsersRowDeleting" msprop:Generator_UserTableName="aspnet_Users" msprop:Generator_RowChangingName="aspnet_UsersRowChanging" msprop:Generator_RowEvHandlerName="aspnet_UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="aspnet_UsersRowDeleted" msprop:Generator_RowEvArgName="aspnet_UsersRowChangeEvent" msprop:Generator_RowChangedName="aspnet_UsersRowChanged" msprop:Generator_RowClassName="aspnet_UsersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ApplicationId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnApplicationId" msprop:Generator_ColumnPropNameInRow="ApplicationId" msprop:Generator_ColumnPropNameInTable="ApplicationIdColumn" msprop:Generator_UserColumnName="ApplicationId" type="xs:string" />
+              <xs:element name="UserId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:string" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoweredUserName" msprop:Generator_ColumnVarNameInTable="columnLoweredUserName" msprop:Generator_ColumnPropNameInRow="LoweredUserName" msprop:Generator_ColumnPropNameInTable="LoweredUserNameColumn" msprop:Generator_UserColumnName="LoweredUserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MobileAlias" msprop:Generator_ColumnVarNameInTable="columnMobileAlias" msprop:Generator_ColumnPropNameInRow="MobileAlias" msprop:Generator_ColumnPropNameInTable="MobileAliasColumn" msprop:Generator_UserColumnName="MobileAlias" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAnonymous" msprop:Generator_ColumnVarNameInTable="columnIsAnonymous" msprop:Generator_ColumnPropNameInRow="IsAnonymous" msprop:Generator_ColumnPropNameInTable="IsAnonymousColumn" msprop:Generator_UserColumnName="IsAnonymous" type="xs:boolean" />
+              <xs:element name="LastActivityDate" msprop:Generator_ColumnVarNameInTable="columnLastActivityDate" msprop:Generator_ColumnPropNameInRow="LastActivityDate" msprop:Generator_ColumnPropNameInTable="LastActivityDateColumn" msprop:Generator_UserColumnName="LastActivityDate" type="xs:dateTime" />
+              <xs:element name="BirimID" msprop:Generator_ColumnVarNameInTable="columnBirimID" msprop:Generator_ColumnPropNameInRow="BirimID" msprop:Generator_ColumnPropNameInTable="BirimIDColumn" msprop:Generator_UserColumnName="BirimID" type="xs:int" minOccurs="0" />
+              <xs:element name="UnvanID" msprop:Generator_ColumnVarNameInTable="columnUnvanID" msprop:Generator_ColumnPropNameInRow="UnvanID" msprop:Generator_ColumnPropNameInTable="UnvanIDColumn" msprop:Generator_UserColumnName="UnvanID" type="xs:int" minOccurs="0" />
+              <xs:element name="Ad" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_UserColumnName="Ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Soyad" msprop:Generator_ColumnVarNameInTable="columnSoyad" msprop:Generator_ColumnPropNameInRow="Soyad" msprop:Generator_ColumnPropNameInTable="SoyadColumn" msprop:Generator_UserColumnName="Soyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vFactRiskGecmis" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Risk_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Risk" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Birim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Birim" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="aspnet_Users_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:aspnet_Users" />
+      <xs:field xpath="mstns:ApplicationId" />
+      <xs:field xpath="mstns:LoweredUserName" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Risk_vFactRiskGecmis" msdata:parent="Risk" msdata:child="vFactRiskGecmis" msdata:parentkey="ID" msdata:childkey="RiskID" msprop:Generator_UserChildTable="vFactRiskGecmis" msprop:Generator_ChildPropName="GetvFactRiskGecmisRows" msprop:Generator_ParentPropName="RiskRow" msprop:Generator_UserRelationName="Risk_vFactRiskGecmis" msprop:Generator_RelationVarName="relationRisk_vFactRiskGecmis" msprop:Generator_UserParentTable="Risk" />
+      <msdata:Relationship name="Birim_vFactRiskGecmis" msdata:parent="Birim" msdata:child="vFactRiskGecmis" msdata:parentkey="ID" msdata:childkey="BirimID" msprop:Generator_UserChildTable="vFactRiskGecmis" msprop:Generator_ChildPropName="GetvFactRiskGecmisRows" msprop:Generator_ParentPropName="BirimRow" msprop:Generator_UserRelationName="Birim_vFactRiskGecmis" msprop:Generator_RelationVarName="relationBirim_vFactRiskGecmis" msprop:Generator_UserParentTable="Birim" />
+      <msdata:Relationship name="aspnet_Users_vFactRiskGecmis" msdata:parent="aspnet_Users" msdata:child="vFactRiskGecmis" msdata:parentkey="UserId" msdata:childkey="KullaniciID" msprop:Generator_UserChildTable="vFactRiskGecmis" msprop:Generator_ChildPropName="GetvFactRiskGecmisRows" msprop:Generator_ParentPropName="aspnet_UsersRow" msprop:Generator_UserRelationName="aspnet_Users_vFactRiskGecmis" msprop:Generator_RelationVarName="relationaspnet_Users_vFactRiskGecmis" msprop:Generator_UserParentTable="aspnet_Users" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

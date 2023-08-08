@@ -1,0 +1,1311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4FF33DC-0CB0-4BA2-9E74-A3789EDA886A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kalitte.RiskManagement.Web</RootNamespace>
+    <AssemblyName>Kalitte.RiskManagement.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>RiskManagementSign.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\Third.Party\Ajax.Toolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\..\Third.Party\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DALEntities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f3e44f4662f5f11, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\DALEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net, Version=1.0.4093.32349, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=1.0.0.32336, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Kalitte.Dashboard.Framework">
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Kalitte.Dashboard.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MapEntities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f3e44f4662f5f11, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\MapEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Reporting\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Reporting\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b9a188c8922137c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Dynamic.Dashboards\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RssToolkit">
+      <HintPath>..\..\Third.Party\RssToolkit\RssToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f3e44f4662f5f11, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\ServerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebApp">
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\WebApp.dll</HintPath>
+    </Reference>
+    <Reference Include="WebControls">
+      <HintPath>..\..\Third.Party\Kalitte.MapVisualizer\WebControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\DefaultTheme\defaultStyles.css" />
+    <Content Include="Controls\Reporting\ReportWindow.ascx" />
+    <Content Include="Controls\Site\ChangeUserPasswordControl.ascx" />
+    <Content Include="Controls\Site\LoginWindowControl.ascx" />
+    <Content Include="Controls\Widgets\Charting\BaseChart.ascx" />
+    <Content Include="Controls\Widgets\Charting\BaseDataList.ascx" />
+    <Content Include="Controls\Widgets\Charting\BirimOzetList.ascx" />
+    <Content Include="Controls\Widgets\Charting\ChartSettingsControl.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskiYuksekSurec.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskHistorySkor.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskBirimSkor.ascx" />
+    <Content Include="Controls\Widgets\Charting\KontrolSayi.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskSayi.ascx" />
+    <Content Include="Controls\Widgets\Charting\SurecSayi.ascx" />
+    <Content Include="Controls\Widgets\Charting\KontrolIsleyis.ascx" />
+    <Content Include="Controls\Widgets\Charting\KontrolSiklik.ascx" />
+    <Content Include="Controls\Widgets\Charting\KontrolTip.ascx" />
+    <Content Include="Controls\Widgets\Charting\OranToplamList.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskGrup.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskHistoryRisk.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskHistory.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskDurum.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskOlasilik.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskSkorDetay.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskEtki.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskSkor.ascx" />
+    <Content Include="Controls\Widgets\Charting\Editor.ascx" />
+    <Content Include="Controls\Widgets\Charting\RiskSkorList.ascx" />
+    <Content Include="Controls\Widgets\Charting\SoruCevap.ascx" />
+    <Content Include="Controls\Widgets\Charting\SoruCevapEditor.ascx" />
+    <Content Include="Controls\Widgets\DashboardEditor\Editor.ascx" />
+    <Content Include="Controls\Widgets\DashboardEditor\PanelPropertyEditor.ascx" />
+    <Content Include="Controls\Widgets\HtmlWidget\Editor.ascx" />
+    <Content Include="Controls\Widgets\HtmlWidget\HtmlWidget.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\BaseBindingRuleEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\GeneralRuleEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\ItemBindingRuleEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\LayerItemBehaviourEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\LayerItemBindingRuleEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\LayerItemListingEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\MapDataEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\ShapeBehaviourEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\ShapeBindingRuleEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\ShapeColoringInfoEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\ShapeVisualizationEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\SymbolBehaviourEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\SymbolBindingRuleEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\SymbolDefinitonsEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\EditorFiles\SymbolVisualizationEditor.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\MapWidget.ascx" />
+    <Content Include="Controls\Widgets\MapVisualizer\MapWidgetEditor.ascx" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\L1-center.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\L1-left.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\L1-right.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\L3-bottom.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\L3-center.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\L3-li-top.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\L3-ul-top.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\vertical-line.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\images\white-highlight.png" />
+    <Content Include="Controls\Widgets\OrganisationChart\resources\slickmap.css" />
+    <Content Include="Controls\Widgets\OrganisationChart\View.ascx" />
+    <Content Include="Controls\Widgets\RiskMap\Editor.ascx" />
+    <Content Include="Controls\Widgets\RiskMap\view.ascx" />
+    <Content Include="Controls\Widgets\RssReader\Editor.ascx" />
+    <Content Include="Controls\Widgets\RssReader\RssReader.ascx" />
+    <Content Include="Controls\Widgets\UnitSelect\SelectorWidget.ascx" />
+    <Content Include="Controls\Widgets\UnitSelect\Editor.ascx" />
+    <Content Include="Controls\Widgets\UnitSelect\UnitSelectWindow.ascx" />
+    <Content Include="Controls\Widgets\UnitSelect\View.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Pages\Management\Duyuru\default.aspx" />
+    <Content Include="Pages\Management\Duyuru\edit.ascx" />
+    <Content Include="Pages\Management\Duyuru\list.ascx" />
+    <Content Include="Pages\Risk\KontrolList.ascx" />
+    <Content Include="Pages\Shared\User\SurecAktar.ascx" />
+    <Content Include="Pages\Surec\UserInfo.ascx" />
+    <Content Include="Reports\Pages\BirimKarne.aspx" />
+    <Content Include="Pages\Risk\AdvancedFiltering.ascx" />
+    <Content Include="Pages\Risk\CalismaGrubuList.ascx" />
+    <Content Include="parameters.svc" />
+    <Content Include="default.aspx" />
+    <Content Include="Pages\default.aspx" />
+    <Content Include="Pages\Dynamic\EditDashboards.aspx" />
+    <Content Include="Pages\Dynamic\ViewDashboard.aspx" />
+    <Content Include="Pages\Dynamic\WidgetEditor.aspx" />
+    <Content Include="Pages\Dynamic\WidgetMaximize.aspx" />
+    <Content Include="Pages\Management\City\default.aspx" />
+    <Content Include="Pages\Management\City\edit.ascx" />
+    <Content Include="Pages\Management\City\list.ascx" />
+    <Content Include="Pages\Management\OtoTamamla\default.aspx" />
+    <Content Include="Pages\Management\OtoTamamla\edit.ascx" />
+    <Content Include="Pages\Management\OtoTamamla\list.ascx" />
+    <Content Include="Pages\Management\Permission\default.aspx" />
+    <Content Include="Pages\Management\Permission\edit.ascx" />
+    <Content Include="Pages\Management\Permission\list.ascx" />
+    <Content Include="Pages\Management\RaporTanim\default.aspx" />
+    <Content Include="Pages\Management\RaporTanim\edit.ascx" />
+    <Content Include="Pages\Management\RaporTanim\list.ascx" />
+    <Content Include="Pages\Management\RiskMatrisTanim\default.aspx" />
+    <Content Include="Pages\Management\RiskMatrisTanim\edit.ascx" />
+    <Content Include="Pages\Management\RiskMatrisTanim\list.ascx" />
+    <Content Include="Pages\Management\RiskScorTanim\default.aspx" />
+    <Content Include="Pages\Management\RiskScorTanim\edit.ascx" />
+    <Content Include="Pages\Management\RiskScorTanim\list.ascx" />
+    <Content Include="Pages\Management\SoruGrup\default.aspx" />
+    <Content Include="Pages\Management\SoruGrup\edit.ascx" />
+    <Content Include="Pages\Management\SoruGrup\List.ascx" />
+    <Content Include="Pages\Management\Soru\cevapedit.ascx" />
+    <Content Include="Pages\Management\Soru\default.aspx" />
+    <Content Include="Pages\Management\Soru\edit.ascx" />
+    <Content Include="Pages\Management\Soru\list.ascx" />
+    <Content Include="Pages\Management\StratejikAmac\hedeflist.ascx" />
+    <Content Include="Pages\Management\StratejikAmac\default.aspx" />
+    <Content Include="Pages\Management\StratejikAmac\edit.ascx" />
+    <Content Include="Pages\Management\StratejikAmac\list.ascx" />
+    <Content Include="Pages\Management\StratejikAmac\performanslist.ascx" />
+    <Content Include="Pages\Management\SurecDayanakTanim\default.aspx" />
+    <Content Include="Pages\Management\SurecDayanakTanim\edit.ascx" />
+    <Content Include="Pages\Management\SurecDayanakTanim\list.ascx" />
+    <Content Include="Pages\Management\SurecYararlananTanim\default.aspx" />
+    <Content Include="Pages\Management\SurecYararlananTanim\edit.ascx" />
+    <Content Include="Pages\Management\SurecYararlananTanim\list.ascx" />
+    <Content Include="Pages\Management\Unit\default.aspx" />
+    <Content Include="Pages\Management\Unit\edit.ascx" />
+    <Content Include="Pages\Management\Unit\list.ascx" />
+    <Content Include="Pages\Management\Unvan\default.aspx" />
+    <Content Include="Pages\Management\Unvan\edit.ascx" />
+    <Content Include="Pages\Management\Unvan\list.ascx" />
+    <Content Include="Pages\Management\RiskGrup\default.aspx" />
+    <Content Include="Pages\Management\RiskGrup\edit.ascx" />
+    <Content Include="Pages\Management\RiskGrup\list.ascx" />
+    <Content Include="Pages\Risk\GecmisList.ascx" />
+    <Content Include="Pages\Risk\list.ascx" />
+    <Content Include="Pages\Risk\default.aspx" />
+    <Content Include="Pages\Risk\answerseditor.ascx" />
+    <Content Include="Pages\Risk\questionlist.ascx" />
+    <Content Include="Pages\Risk\RiskPuanView.ascx" />
+    <Content Include="Pages\Shared\Report\ExecuteReport.aspx" />
+    <Content Include="Pages\Shared\User\default.aspx" />
+    <Content Include="Pages\Shared\User\edit.ascx" />
+    <Content Include="Pages\Shared\User\list.ascx" />
+    <Content Include="Pages\Shared\CalismaGrup\default.aspx" />
+    <Content Include="Pages\Shared\CalismaGrup\edit.ascx" />
+    <Content Include="Pages\Shared\CalismaGrup\list.ascx" />
+    <Content Include="Pages\Shared\login.aspx" />
+    <Content Include="Pages\Shared\UnhandledError.aspx" />
+    <Content Include="Pages\Surec\controllist.ascx" />
+    <Content Include="Controls\Site\DosyaEkList.ascx" />
+    <Content Include="Pages\Surec\risklist.ascx" />
+    <Content Include="Pages\Surec\default.aspx" />
+    <Content Include="Pages\Surec\edit.ascx" />
+    <Content Include="Pages\Surec\list.ascx" />
+    <Content Include="Reports\WebUserControl1.ascx" />
+    <Content Include="Resource\Css\styles.css" />
+    <Content Include="Resource\Image\docimage.png" />
+    <Content Include="Resource\Image\icon-info.png" />
+    <Content Include="Resource\Image\Info_Box_Blue.png" />
+    <Content Include="Resource\Image\loading.gif" />
+    <Content Include="Resource\Image\logo.png" />
+    <Content Include="Resource\Image\risk-banner.jpg" />
+    <Content Include="Resource\Image\user-report-logo.jpg" />
+    <Content Include="Resource\Image\userlogin.png" />
+    <Content Include="Resource\Script\kalitte.js" />
+    <Content Include="analitics.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\AppResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\AppResource.TR-tr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResource.TR-tr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reporting\ReportWindow.ascx.cs">
+      <DependentUpon>ReportWindow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Reporting\ReportWindow.ascx.designer.cs">
+      <DependentUpon>ReportWindow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Site\ChangeUserPasswordControl.ascx.cs">
+      <DependentUpon>ChangeUserPasswordControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Site\ChangeUserPasswordControl.ascx.designer.cs">
+      <DependentUpon>ChangeUserPasswordControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Site\LoginWindowControl.ascx.cs">
+      <DependentUpon>LoginWindowControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Site\LoginWindowControl.ascx.designer.cs">
+      <DependentUpon>LoginWindowControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\BaseChart.ascx.cs">
+      <DependentUpon>BaseChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\BaseChart.ascx.designer.cs">
+      <DependentUpon>BaseChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\BaseDataList.ascx.cs">
+      <DependentUpon>BaseDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\BaseDataList.ascx.designer.cs">
+      <DependentUpon>BaseDataList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\BirimOzetList.ascx.cs">
+      <DependentUpon>BirimOzetList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\BirimOzetList.ascx.designer.cs">
+      <DependentUpon>BirimOzetList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\ChartSettingsControl.ascx.cs">
+      <DependentUpon>ChartSettingsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\ChartSettingsControl.ascx.designer.cs">
+      <DependentUpon>ChartSettingsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskiYuksekSurec.ascx.cs">
+      <DependentUpon>RiskiYuksekSurec.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskiYuksekSurec.ascx.designer.cs">
+      <DependentUpon>RiskiYuksekSurec.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskHistorySkor.ascx.cs">
+      <DependentUpon>RiskHistorySkor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskHistorySkor.ascx.designer.cs">
+      <DependentUpon>RiskHistorySkor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskBirimSkor.ascx.cs">
+      <DependentUpon>RiskBirimSkor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskBirimSkor.ascx.designer.cs">
+      <DependentUpon>RiskBirimSkor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolSayi.ascx.cs">
+      <DependentUpon>KontrolSayi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolSayi.ascx.designer.cs">
+      <DependentUpon>KontrolSayi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSayi.ascx.cs">
+      <DependentUpon>RiskSayi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSayi.ascx.designer.cs">
+      <DependentUpon>RiskSayi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\SurecSayi.ascx.cs">
+      <DependentUpon>SurecSayi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\SurecSayi.ascx.designer.cs">
+      <DependentUpon>SurecSayi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolIsleyis.ascx.cs">
+      <DependentUpon>KontrolIsleyis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolIsleyis.ascx.designer.cs">
+      <DependentUpon>KontrolIsleyis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolSiklik.ascx.cs">
+      <DependentUpon>KontrolSiklik.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolSiklik.ascx.designer.cs">
+      <DependentUpon>KontrolSiklik.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolTip.ascx.cs">
+      <DependentUpon>KontrolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\KontrolTip.ascx.designer.cs">
+      <DependentUpon>KontrolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\OranToplamList.ascx.cs">
+      <DependentUpon>OranToplamList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\OranToplamList.ascx.designer.cs">
+      <DependentUpon>OranToplamList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskGrup.ascx.cs">
+      <DependentUpon>RiskGrup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskGrup.ascx.designer.cs">
+      <DependentUpon>RiskGrup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskHistoryRisk.ascx.cs">
+      <DependentUpon>RiskHistoryRisk.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskHistoryRisk.ascx.designer.cs">
+      <DependentUpon>RiskHistoryRisk.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskHistory.ascx.cs">
+      <DependentUpon>RiskHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskHistory.ascx.designer.cs">
+      <DependentUpon>RiskHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskDurum.ascx.cs">
+      <DependentUpon>RiskDurum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskDurum.ascx.designer.cs">
+      <DependentUpon>RiskDurum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskOlasilik.ascx.cs">
+      <DependentUpon>RiskOlasilik.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskOlasilik.ascx.designer.cs">
+      <DependentUpon>RiskOlasilik.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSkorDetay.ascx.cs">
+      <DependentUpon>RiskSkorDetay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSkorDetay.ascx.designer.cs">
+      <DependentUpon>RiskSkorDetay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskEtki.ascx.cs">
+      <DependentUpon>RiskEtki.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskEtki.ascx.designer.cs">
+      <DependentUpon>RiskEtki.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSkor.ascx.cs">
+      <DependentUpon>RiskSkor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSkor.ascx.designer.cs">
+      <DependentUpon>RiskSkor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSkorList.ascx.cs">
+      <DependentUpon>RiskSkorList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\RiskSkorList.ascx.designer.cs">
+      <DependentUpon>RiskSkorList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\SoruCevap.ascx.cs">
+      <DependentUpon>SoruCevap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\SoruCevap.ascx.designer.cs">
+      <DependentUpon>SoruCevap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\SoruCevapEditor.ascx.cs">
+      <DependentUpon>SoruCevapEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\Charting\SoruCevapEditor.ascx.designer.cs">
+      <DependentUpon>SoruCevapEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\DashboardEditor\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\DashboardEditor\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\DashboardEditor\PanelPropertyEditor.ascx.cs">
+      <DependentUpon>PanelPropertyEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\DashboardEditor\PanelPropertyEditor.ascx.designer.cs">
+      <DependentUpon>PanelPropertyEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\HtmlWidget\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\HtmlWidget\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\HtmlWidget\HtmlWidget.ascx.cs">
+      <DependentUpon>HtmlWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\HtmlWidget\HtmlWidget.ascx.designer.cs">
+      <DependentUpon>HtmlWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\MapVisualizer\MapWidget.ascx.cs">
+      <DependentUpon>MapWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\MapVisualizer\MapWidget.ascx.designer.cs">
+      <DependentUpon>MapWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\MapVisualizer\MapWidgetEditor.ascx.cs">
+      <DependentUpon>MapWidgetEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\MapVisualizer\MapWidgetEditor.ascx.designer.cs">
+      <DependentUpon>MapWidgetEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\OrganisationChart\View.ascx.cs">
+      <DependentUpon>View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\OrganisationChart\View.ascx.designer.cs">
+      <DependentUpon>View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\RiskMap\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\RiskMap\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\RiskMap\view.ascx.cs">
+      <DependentUpon>view.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\RiskMap\view.ascx.designer.cs">
+      <DependentUpon>view.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\RssReader\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\RssReader\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\RssReader\RssReader.ascx.cs">
+      <DependentUpon>RssReader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\RssReader\RssReader.ascx.designer.cs">
+      <DependentUpon>RssReader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\SelectorWidget.ascx.cs">
+      <DependentUpon>SelectorWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\SelectorWidget.ascx.designer.cs">
+      <DependentUpon>SelectorWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\UnitSelectWindow.ascx.cs">
+      <DependentUpon>UnitSelectWindow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\UnitSelectWindow.ascx.designer.cs">
+      <DependentUpon>UnitSelectWindow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\View.ascx.cs">
+      <DependentUpon>View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Widgets\UnitSelect\View.ascx.designer.cs">
+      <DependentUpon>View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\CaptchaHandler.ashx.cs">
+      <DependentUpon>CaptchaHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DownloadHandler.ashx.cs">
+      <DependentUpon>DownloadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\DefaultMaster.Master.cs">
+      <DependentUpon>DefaultMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\DefaultMaster.Master.designer.cs">
+      <DependentUpon>DefaultMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Duyuru\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Duyuru\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Duyuru\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Duyuru\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Duyuru\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Duyuru\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\KontrolList.ascx.cs">
+      <DependentUpon>KontrolList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\KontrolList.ascx.designer.cs">
+      <DependentUpon>KontrolList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\ListerViewControl.cs" />
+    <Compile Include="Pages\Shared\User\SurecAktar.ascx.cs">
+      <DependentUpon>SurecAktar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\User\SurecAktar.ascx.designer.cs">
+      <DependentUpon>SurecAktar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Surec\UserInfo.ascx.cs">
+      <DependentUpon>UserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Surec\UserInfo.ascx.designer.cs">
+      <DependentUpon>UserInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pages\BirimKarne.aspx.cs">
+      <DependentUpon>BirimKarne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Pages\BirimKarne.aspx.designer.cs">
+      <DependentUpon>BirimKarne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dynamic\EditDashboards.aspx.cs">
+      <DependentUpon>EditDashboards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dynamic\EditDashboards.aspx.designer.cs">
+      <DependentUpon>EditDashboards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dynamic\ViewDashboard.aspx.cs">
+      <DependentUpon>ViewDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dynamic\ViewDashboard.aspx.designer.cs">
+      <DependentUpon>ViewDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dynamic\WidgetEditor.aspx.cs">
+      <DependentUpon>WidgetEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dynamic\WidgetEditor.aspx.designer.cs">
+      <DependentUpon>WidgetEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dynamic\WidgetMaximize.aspx.cs">
+      <DependentUpon>WidgetMaximize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dynamic\WidgetMaximize.aspx.designer.cs">
+      <DependentUpon>WidgetMaximize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\City\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\City\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\City\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\City\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\City\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\City\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\OtoTamamla\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\OtoTamamla\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\OtoTamamla\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\OtoTamamla\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\OtoTamamla\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\OtoTamamla\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Permission\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Permission\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Permission\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Permission\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Permission\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Permission\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RaporTanim\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RaporTanim\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RaporTanim\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RaporTanim\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RaporTanim\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RaporTanim\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskMatrisTanim\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskMatrisTanim\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskMatrisTanim\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskMatrisTanim\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskMatrisTanim\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskMatrisTanim\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskScorTanim\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskScorTanim\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskScorTanim\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskScorTanim\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskScorTanim\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskScorTanim\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SoruGrup\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SoruGrup\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SoruGrup\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SoruGrup\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SoruGrup\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SoruGrup\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\cevapedit.ascx.cs">
+      <DependentUpon>cevapedit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\cevapedit.ascx.designer.cs">
+      <DependentUpon>cevapedit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Soru\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\hedeflist.ascx.cs">
+      <DependentUpon>hedeflist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\hedeflist.ascx.designer.cs">
+      <DependentUpon>hedeflist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\performanslist.ascx.cs">
+      <DependentUpon>performanslist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\StratejikAmac\performanslist.ascx.designer.cs">
+      <DependentUpon>performanslist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SurecDayanakTanim\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SurecDayanakTanim\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SurecDayanakTanim\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SurecDayanakTanim\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SurecDayanakTanim\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SurecDayanakTanim\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SurecYararlananTanim\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SurecYararlananTanim\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SurecYararlananTanim\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SurecYararlananTanim\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\SurecYararlananTanim\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\SurecYararlananTanim\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Unit\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Unit\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Unit\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Unit\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Unit\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Unit\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Unvan\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Unvan\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Unvan\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Unvan\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\Unvan\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\Unvan\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskGrup\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskGrup\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskGrup\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskGrup\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management\RiskGrup\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management\RiskGrup\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\AdvancedFiltering.ascx.cs">
+      <DependentUpon>AdvancedFiltering.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\AdvancedFiltering.ascx.designer.cs">
+      <DependentUpon>AdvancedFiltering.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\CalismaGrubuList.ascx.cs">
+      <DependentUpon>CalismaGrubuList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\CalismaGrubuList.ascx.designer.cs">
+      <DependentUpon>CalismaGrubuList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\GecmisList.ascx.cs">
+      <DependentUpon>GecmisList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\GecmisList.ascx.designer.cs">
+      <DependentUpon>GecmisList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\answerseditor.ascx.cs">
+      <DependentUpon>answerseditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\answerseditor.ascx.designer.cs">
+      <DependentUpon>answerseditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\questionlist.ascx.cs">
+      <DependentUpon>questionlist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\questionlist.ascx.designer.cs">
+      <DependentUpon>questionlist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Risk\RiskPuanView.ascx.cs">
+      <DependentUpon>RiskPuanView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Risk\RiskPuanView.ascx.designer.cs">
+      <DependentUpon>RiskPuanView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\Report\ExecuteReport.aspx.cs">
+      <DependentUpon>ExecuteReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\Report\ExecuteReport.aspx.designer.cs">
+      <DependentUpon>ExecuteReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\User\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\User\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\User\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\User\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\User\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\User\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\CalismaGrup\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\CalismaGrup\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\CalismaGrup\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\CalismaGrup\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\CalismaGrup\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\CalismaGrup\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\UnhandledError.aspx.cs">
+      <DependentUpon>UnhandledError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\UnhandledError.aspx.designer.cs">
+      <DependentUpon>UnhandledError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Surec\controllist.ascx.cs">
+      <DependentUpon>controllist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Surec\controllist.ascx.designer.cs">
+      <DependentUpon>controllist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Site\DosyaEkList.ascx.cs">
+      <DependentUpon>DosyaEkList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Site\DosyaEkList.ascx.designer.cs">
+      <DependentUpon>DosyaEkList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Surec\risklist.ascx.cs">
+      <DependentUpon>risklist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Surec\risklist.ascx.designer.cs">
+      <DependentUpon>risklist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Surec\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Surec\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Surec\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Surec\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Surec\list.ascx.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Surec\list.ascx.designer.cs">
+      <DependentUpon>list.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kalitte.BI.Shared\Kalitte.BI.Shared.csproj">
+      <Project>{6d83fd81-cb27-4c99-9a0c-4e5d6cac3b79}</Project>
+      <Name>Kalitte.BI.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kalitte.RiskManagement.Framework\Kalitte.RiskManagement.Framework.csproj">
+      <Project>{06B656D0-E7C8-4DB3-9407-41630DB3D67F}</Project>
+      <Name>Kalitte.Sensors.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\CaptchaHandler.ashx" />
+    <None Include="Properties\PublishProfiles\Risk.pubxml" />
+    <None Include="Resource\Document\RiskPuanlamaKilavuzu.doc" />
+    <None Include="RiskManagementSign.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\DefaultMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Kalitte.Dashboard.Framework.DashboardSurface.lic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Widgets\DashboardEditor\App_LocalResources\Editor.ascx.resx" />
+    <Content Include="Controls\Widgets\DashboardEditor\App_LocalResources\Editor.ascx.TR-tr.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Controls\Widgets\DashboardEditor\App_LocalResources\PanelPropertyEditor.ascx.resx" />
+    <Content Include="Controls\Widgets\DashboardEditor\App_LocalResources\PanelPropertyEditor.ascx.TR-tr.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\AppResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AppResource.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\AppResource.TR-tr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AppResource.TR-tr.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\DownloadHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\RiskDurumSkorRaporu.rdlc" />
+    <EmbeddedResource Include="Reports\SurecRiskKontrolRaporu.rdlc" />
+    <EmbeddedResource Include="Reports\RiskGecmisRaporu.rdlc" />
+    <EmbeddedResource Include="Reports\RiskKaydiRaporu.rdlc" />
+    <EmbeddedResource Include="Reports\SurecRiskRaporu.rdlc" />
+    <EmbeddedResource Include="Reports\UsersReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Common\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9999</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Kalitte.RiskManagement</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

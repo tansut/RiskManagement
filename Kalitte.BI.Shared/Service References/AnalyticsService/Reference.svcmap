@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4af14ae9-565e-4fde-9601-ef760829922b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost/Kalitte.RiskManagement/analitics.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="analitics6.xsd" MetadataType="Schema" ID="c0494a11-c3ee-4747-8f94-641485b7fe6b" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd3" />
+    <MetadataFile FileName="analitics61.xsd" MetadataType="Schema" ID="7603d071-2e91-485f-bb6d-6fd03bf80dfc" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd4" />
+    <MetadataFile FileName="analitics62.xsd" MetadataType="Schema" ID="de6c9e20-9434-4f89-bc76-1ef51e588f8f" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd5" />
+    <MetadataFile FileName="analitics63.xsd" MetadataType="Schema" ID="58b33610-4f37-4b60-9c90-d39bc763902a" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd2" />
+    <MetadataFile FileName="AnalyticsService1.wsdl" MetadataType="Wsdl" ID="b9345465-fdd4-4c04-97f4-c54866e1f6de" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?wsdl" />
+    <MetadataFile FileName="analitics64.xsd" MetadataType="Schema" ID="60a7b5e7-22bf-4f21-a9b3-7f01235ff07a" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd0" />
+    <MetadataFile FileName="analitics65.xsd" MetadataType="Schema" ID="feba0325-8501-43a0-8110-83cbd9f1be74" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?xsd=xsd1" />
+    <MetadataFile FileName="analitics1.wsdl" MetadataType="Wsdl" ID="6073b0aa-3098-4586-bcc3-2e5b2131feb2" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="analitics1.disco" MetadataType="Disco" ID="cfc78e22-f285-4d04-a9ca-30020951e59d" SourceId="1" SourceUrl="http://berkay.kalitte.local/Kalitte.RiskManagement/analitics.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

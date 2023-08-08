@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>
+    </TimeStampOfAssociatedLegacyPublishXmlFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="analitics.svc">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="App_GlobalResources/AppResource.resx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="App_GlobalResources/AppResource.TR-tr.resx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="App_Themes/DefaultTheme/defaultStyles.css">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/ar/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/CKEditor.NET.dll">
+      <publishTime>06/06/2013 15:55:06</publishTime>
+    </File>
+    <File Include="bin/cs/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/DALEntities.dll">
+      <publishTime>11/15/2012 09:20:04</publishTime>
+    </File>
+    <File Include="bin/de-DE/Kalitte.Dashboard.Framework.resources.dll">
+      <publishTime>11/15/2012 09:20:05</publishTime>
+    </File>
+    <File Include="bin/de/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/es/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/Ext.Net.dll">
+      <publishTime>12/03/2012 10:19:36</publishTime>
+    </File>
+    <File Include="bin/Ext.Net.Utilities.dll">
+      <publishTime>12/03/2012 10:19:36</publishTime>
+    </File>
+    <File Include="bin/fr-FR/Kalitte.Dashboard.Framework.resources.dll">
+      <publishTime>11/15/2012 09:20:05</publishTime>
+    </File>
+    <File Include="bin/fr/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/he/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/hi/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/it/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/ja/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/Kalitte.BI.Shared.dll">
+      <publishTime>09/16/2013 09:52:56</publishTime>
+    </File>
+    <File Include="bin/Kalitte.Dashboard.Framework.DashboardSurface.lic">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="bin/Kalitte.Dashboard.Framework.dll">
+      <publishTime>12/03/2012 10:19:36</publishTime>
+    </File>
+    <File Include="bin/Kalitte.RiskManagement.Framework.dll">
+      <publishTime>09/16/2013 10:34:49</publishTime>
+    </File>
+    <File Include="bin/Kalitte.RiskManagement.Web.dll">
+      <publishTime>10/02/2013 17:09:06</publishTime>
+    </File>
+    <File Include="bin/ko/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/MapEntities.dll">
+      <publishTime>11/15/2012 09:20:04</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/03/2012 10:19:36</publishTime>
+    </File>
+    <File Include="bin/nl/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/pt/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/RssToolkit.dll">
+      <publishTime>11/15/2012 09:20:05</publishTime>
+    </File>
+    <File Include="bin/ru/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/ServerPlatform.dll">
+      <publishTime>11/15/2012 09:20:04</publishTime>
+    </File>
+    <File Include="bin/tr-TR/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:03</publishTime>
+    </File>
+    <File Include="bin/tr-TR/Kalitte.Dashboard.Framework.resources.dll">
+      <publishTime>11/15/2012 09:20:05</publishTime>
+    </File>
+    <File Include="bin/WebApp.dll">
+      <publishTime>11/15/2012 09:20:04</publishTime>
+    </File>
+    <File Include="bin/WebControls.dll">
+      <publishTime>11/15/2012 09:20:04</publishTime>
+    </File>
+    <File Include="bin/zh-CHS/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="bin/zh-CHT/AjaxControlToolkit.resources.dll">
+      <publishTime>11/15/2012 09:20:02</publishTime>
+    </File>
+    <File Include="Controls/Reporting/ReportWindow.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Site/ChangeUserPasswordControl.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Controls/Site/DosyaEkList.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Controls/Site/LoginWindowControl.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/BaseChart.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/BaseDataList.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/BirimOzetList.ascx">
+      <publishTime>06/06/2013 15:55:13</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/ChartSettingsControl.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/Editor.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/KontrolIsleyis.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/KontrolSayi.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/KontrolSiklik.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/KontrolTip.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/OranToplamList.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskBirimSkor.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskDurum.ascx">
+      <publishTime>12/13/2012 10:47:47</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskEtki.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskGrup.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskHistory.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskHistoryRisk.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskHistorySkor.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskiYuksekSurec.ascx">
+      <publishTime>06/06/2013 15:55:13</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskOlasilik.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskSayi.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskSkor.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskSkorDetay.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/RiskSkorList.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/SoruCevap.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/SoruCevapEditor.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/Charting/SurecSayi.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/DashboardEditor/App_LocalResources/Editor.ascx.resx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/DashboardEditor/App_LocalResources/Editor.ascx.TR-tr.resx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/DashboardEditor/App_LocalResources/PanelPropertyEditor.ascx.resx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/DashboardEditor/App_LocalResources/PanelPropertyEditor.ascx.TR-tr.resx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/DashboardEditor/Editor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/DashboardEditor/PanelPropertyEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/HtmlWidget/Editor.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/HtmlWidget/HtmlWidget.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/BaseBindingRuleEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/GeneralRuleEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/ItemBindingRuleEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/LayerItemBehaviourEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/LayerItemBindingRuleEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/LayerItemListingEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/MapDataEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/ShapeBehaviourEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/ShapeBindingRuleEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/ShapeColoringInfoEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/ShapeVisualizationEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/SymbolBehaviourEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/SymbolBindingRuleEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/SymbolDefinitonsEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/EditorFiles/SymbolVisualizationEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/MapWidget.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/MapVisualizer/MapWidgetEditor.ascx">
+      <publishTime>11/15/2012 09:20:19</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/L1-center.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/L1-left.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/L1-right.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/L3-bottom.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/L3-center.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/L3-li-top.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/L3-ul-top.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/vertical-line.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/images/white-highlight.png">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/resources/slickmap.css">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/OrganisationChart/View.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/RiskMap/Editor.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/RiskMap/view.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/RssReader/Editor.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/RssReader/RssReader.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/UnitSelect/Editor.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/UnitSelect/SelectorWidget.ascx">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Controls/Widgets/UnitSelect/UnitSelectWindow.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="Controls/Widgets/UnitSelect/View.ascx">
+      <publishTime>11/15/2012 09:20:18</publishTime>
+    </File>
+    <File Include="default.aspx">
+      <publishTime>06/25/2013 11:15:57</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/03/2012 10:19:38</publishTime>
+    </File>
+    <File Include="Handlers/CaptchaHandler.ashx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Handlers/DownloadHandler.ashx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="HtmlPage1.html">
+      <publishTime>09/10/2013 11:39:16</publishTime>
+    </File>
+    <File Include="Kalitte.Dashboard.Framework.DashboardSurface.lic">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="MasterPages/DefaultMaster.Master">
+      <publishTime>12/03/2012 10:19:39</publishTime>
+    </File>
+    <File Include="Pages/default.aspx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Dynamic/EditDashboards.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Dynamic/ViewDashboard.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Dynamic/WidgetEditor.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Dynamic/WidgetMaximize.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Management/City/default.aspx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/City/edit.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/City/list.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/Duyuru/default.aspx">
+      <publishTime>06/06/2013 15:55:12</publishTime>
+    </File>
+    <File Include="Pages/Management/Duyuru/edit.ascx">
+      <publishTime>06/06/2013 15:55:12</publishTime>
+    </File>
+    <File Include="Pages/Management/Duyuru/list.ascx">
+      <publishTime>06/06/2013 15:55:12</publishTime>
+    </File>
+    <File Include="Pages/Management/OtoTamamla/default.aspx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/OtoTamamla/edit.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/OtoTamamla/list.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/Permission/default.aspx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/Permission/edit.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/Permission/list.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/RaporTanim/default.aspx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/RaporTanim/edit.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/RaporTanim/list.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskGrup/default.aspx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskGrup/edit.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskGrup/list.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskMatrisTanim/default.aspx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskMatrisTanim/edit.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskMatrisTanim/list.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskScorTanim/default.aspx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskScorTanim/edit.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/RiskScorTanim/list.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/Soru/cevapedit.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/Soru/default.aspx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/Soru/edit.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/Soru/list.ascx">
+      <publishTime>11/15/2012 09:20:17</publishTime>
+    </File>
+    <File Include="Pages/Management/SoruGrup/default.aspx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/SoruGrup/edit.ascx">
+      <publishTime>06/06/2013 15:55:12</publishTime>
+    </File>
+    <File Include="Pages/Management/SoruGrup/List.ascx">
+      <publishTime>06/06/2013 15:55:12</publishTime>
+    </File>
+    <File Include="Pages/Management/StratejikAmac/default.aspx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/StratejikAmac/edit.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/StratejikAmac/hedeflist.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/StratejikAmac/list.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/StratejikAmac/performanslist.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/SurecDayanakTanim/default.aspx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/SurecDayanakTanim/edit.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/SurecDayanakTanim/list.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/SurecYararlananTanim/default.aspx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/SurecYararlananTanim/edit.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/SurecYararlananTanim/list.ascx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/Unit/default.aspx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/Unit/edit.ascx">
+      <publishTime>06/06/2013 15:55:12</publishTime>
+    </File>
+    <File Include="Pages/Management/Unit/list.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Management/Unvan/default.aspx">
+      <publishTime>11/15/2012 09:20:16</publishTime>
+    </File>
+    <File Include="Pages/Management/Unvan/edit.ascx">
+      <publishTime>12/13/2012 10:47:47</publishTime>
+    </File>
+    <File Include="Pages/Management/Unvan/list.ascx">
+      <publishTime>12/13/2012 10:47:47</publishTime>
+    </File>
+    <File Include="Pages/Risk/AdvancedFiltering.ascx">
+      <publishTime>06/06/2013 15:55:11</publishTime>
+    </File>
+    <File Include="Pages/Risk/answerseditor.ascx">
+      <publishTime>06/06/2013 15:55:11</publishTime>
+    </File>
+    <File Include="Pages/Risk/CalismaGrubuList.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Risk/default.aspx">
+      <publishTime>06/21/2013 17:11:41</publishTime>
+    </File>
+    <File Include="Pages/Risk/GecmisList.ascx">
+      <publishTime>01/31/2013 15:55:47</publishTime>
+    </File>
+    <File Include="Pages/Risk/KontrolList.ascx">
+      <publishTime>01/31/2013 15:55:47</publishTime>
+    </File>
+    <File Include="Pages/Risk/list.ascx">
+      <publishTime>06/06/2013 15:55:11</publishTime>
+    </File>
+    <File Include="Pages/Risk/questionlist.ascx">
+      <publishTime>11/15/2012 09:20:15</publishTime>
+    </File>
+    <File Include="Pages/Risk/RiskPuanView.ascx">
+      <publishTime>06/06/2013 15:55:11</publishTime>
+    </File>
+    <File Include="Pages/Shared/CalismaGrup/default.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Shared/CalismaGrup/edit.ascx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Shared/CalismaGrup/list.ascx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Shared/login.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Shared/Report/ExecuteReport.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Shared/UnhandledError.aspx">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Pages/Shared/User/default.aspx">
+      <publishTime>06/06/2013 15:55:11</publishTime>
+    </File>
+    <File Include="Pages/Shared/User/edit.ascx">
+      <publishTime>09/10/2013 16:14:07</publishTime>
+    </File>
+    <File Include="Pages/Shared/User/list.ascx">
+      <publishTime>07/15/2013 18:22:48</publishTime>
+    </File>
+    <File Include="Pages/Shared/User/SurecAktar.ascx">
+      <publishTime>06/06/2013 15:55:10</publishTime>
+    </File>
+    <File Include="Pages/Surec/controllist.ascx">
+      <publishTime>06/06/2013 15:55:10</publishTime>
+    </File>
+    <File Include="Pages/Surec/default.aspx">
+      <publishTime>06/06/2013 15:55:10</publishTime>
+    </File>
+    <File Include="Pages/Surec/edit.ascx">
+      <publishTime>10/02/2013 16:55:05</publishTime>
+    </File>
+    <File Include="Pages/Surec/list.ascx">
+      <publishTime>06/06/2013 15:55:10</publishTime>
+    </File>
+    <File Include="Pages/Surec/risklist.ascx">
+      <publishTime>06/06/2013 15:55:10</publishTime>
+    </File>
+    <File Include="Pages/Surec/UserInfo.ascx">
+      <publishTime>06/06/2013 15:55:10</publishTime>
+    </File>
+    <File Include="parameters.svc">
+      <publishTime>11/15/2012 09:20:14</publishTime>
+    </File>
+    <File Include="Reports/Pages/BirimKarne.aspx">
+      <publishTime>12/03/2012 10:19:38</publishTime>
+    </File>
+    <File Include="Reports/WebUserControl1.ascx">
+      <publishTime>12/03/2012 10:19:38</publishTime>
+    </File>
+    <File Include="Resource/Css/styles.css">
+      <publishTime>06/06/2013 15:55:09</publishTime>
+    </File>
+    <File Include="Resource/Image/docimage.png">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Image/icon-info.png">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Image/Info_Box_Blue.png">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Image/loading.gif">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Image/logo.png">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Image/risk-banner.jpg">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Image/user-report-logo.jpg">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Image/userlogin.png">
+      <publishTime>11/15/2012 09:20:12</publishTime>
+    </File>
+    <File Include="Resource/Script/kalitte.js">
+      <publishTime>12/03/2012 10:19:38</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/26/2013 13:58:30</publishTime>
+    </File>
+    <File Include="Web.sitemap">
+      <publishTime>10/01/2013 16:03:15</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

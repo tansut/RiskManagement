@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.625" name="Repository">
+  <DataContextMoniker Name="/RepositoryDataContext" />
+  <nestedChildShapes>
+    <classShape Id="64cb9a07-1a7c-4b59-bcf4-f83f4ba86c73" absoluteBounds="3.5, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/RepositoryDataContext/ModuleDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e38b523-b776-4b30-b556-5297db92bdea" absoluteBounds="3.515, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c9c4027-039e-4ce8-b1d8-5801fe414bb4" absoluteBounds="1, 2.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RepositoryDataContext/DbCommand" />
+      <nestedChildShapes>
+        <elementListCompartment Id="192d632d-2e74-49ca-a319-b3215e880114" absoluteBounds="1.0150000000000001, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 4.13544840494792); (3.5 : 4.13544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepositoryDataContext/DbCommand/DbCommand_ModuleDetail" />
+      <nodes>
+        <classShapeMoniker Id="6c9c4027-039e-4ce8-b1d8-5801fe414bb4" />
+        <classShapeMoniker Id="64cb9a07-1a7c-4b59-bcf4-f83f4ba86c73" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a88b136c-e904-4943-99b0-f16c8db586ef" absoluteBounds="3.875, 6.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RepositoryDataContext/DashboardTemplate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8193be14-80f0-4ea7-9754-a60077bfa1c9" absoluteBounds="3.89, 7.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71a0b8a2-d6b0-496a-8bcd-a52b3463a7c0" absoluteBounds="0.875, 5.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/RepositoryDataContext/DashboardInstance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08feab29-ec11-4788-a850-30ae462e6b28" absoluteBounds="0.89, 6.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 7.20274983723958); (2.875 : 7.20274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepositoryDataContext/DashboardTemplate/DashboardTemplate_DashboardInstance" />
+      <nodes>
+        <classShapeMoniker Id="a88b136c-e904-4943-99b0-f16c8db586ef" />
+        <classShapeMoniker Id="71a0b8a2-d6b0-496a-8bcd-a52b3463a7c0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ad18f63f-0dca-48af-ba01-f9ce59420d91" absoluteBounds="6.75, 3, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/RepositoryDataContext/Module" />
+      <nestedChildShapes>
+        <elementListCompartment Id="302b15e0-2c53-475f-aa14-c3503f176364" absoluteBounds="6.765, 3.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.75 : 4.35659912109375); (5.5 : 4.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RepositoryDataContext/Module/Module_ModuleDetail" />
+      <nodes>
+        <classShapeMoniker Id="ad18f63f-0dca-48af-ba01-f9ce59420d91" />
+        <classShapeMoniker Id="64cb9a07-1a7c-4b59-bcf4-f83f4ba86c73" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ed645d13-203c-4b7a-a76a-9fadbe36a33c" absoluteBounds="1, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/RepositoryDataContext/SystemParameter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="628594de-4e8d-443b-a64c-69ee81efd9ed" absoluteBounds="1.0150000000000001, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d28a00c-ccb8-45d6-afa8-d615e9ff0fdf" absoluteBounds="7, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/RepositoryDataContext/UserReportsBI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecb454ed-5530-4444-a91c-790e3eee29de" absoluteBounds="7.0150000000000006, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
